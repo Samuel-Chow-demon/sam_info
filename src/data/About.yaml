@@ -1,0 +1,85 @@
+title: Knowing Sam
+paragraph:
+    - index: 0
+      content:
+        valueGp: 
+            - value: 
+                text: "Holding a "
+            - value: 
+                text: "First Class Honours"
+                color: 'rgb(226, 193, 131)'
+            - value: 
+                text: " degree in "
+            - value:
+                text: "Mechatronic Engineering "
+                color: 'rgb(226, 193, 131)'
+            - value:
+                text: "and a "
+            - value:
+                text: "Master of Philosophy "
+                color: 'rgb(226, 193, 131)'
+            - value: 
+                text: "degree with research focused on diamagnetic levitation, specifically its extension and stability. My research insight the potential of diamagnetic levitation in enhancing micro- and nano-scale force sensing technologies."
+
+    - index : 1
+      content:
+        valueGp: 
+            - value:
+                text: "Work as a "
+            - value: 
+                text: "Software Engineer "
+                color: 'rgb(226, 193, 131)'
+            - value: 
+                text: "with over "
+            - value:
+                text: "12 years of experience in Object-Oriented Programming"
+                color: 'rgb(226, 193, 131)'
+            - value:
+                text: ", I have specialized in "
+            - value:
+                text: "Semi-Conductor Manufacturing Robotics"
+                color: 'rgb(226, 193, 131)'
+            - value:
+                text: ", contributing to projects ranging from High-Speed chip LED Testing & Sorting Machines to Wafer-Embedded Chip / LED "
+            - value:
+                text: "Surface Mount Technology Bonding Machines"
+                color: 'rgb(226, 193, 131)'
+            - value:
+                text: ". Handled unit as small as down to 2 mil x 4 mil sized chip (1 mil == 0.0254 mm). An overview expertise involves:"
+
+    - index: 2
+      list:
+        - point: "Conducting motion cycle and control research"
+        - point: "Optimizing robotic production cycles (up to 60,000 UPH)"
+        - point: "Developing machine application software with in-house vision systems and motor control"
+        - point: "Machine product software responsible to in-house production and customers"
+        - point: "Delivering tailor production solutions & Industry 4.0 to customers"
+
+    - index: 3
+      subheader:
+        text: "Samuel := INFINITY + 1"
+        size: "24px"
+        align: "center"
+        color: 'rgb(226, 193, 131)'
+
+    - index: 4
+      content:
+        style:
+            margin:
+                mb: "0"
+        valueGp:
+            - value:
+                text: "— I embrace a mindset that welcome infinite possibilities to learn from others and the world. With humility, I acknowledge my weaknesses, face failures with optimism, and strive to turn shortcomings into strength for future challenges. This growth-oriented perspective has led me to expand my expertise in "
+            - value:
+                text: "Computer System Technology"
+                color: 'rgb(226, 193, 131)'
+            - value: 
+                text: " to deepen my knowledege in "
+            - value:
+                text: "AI, Web & Mobile "
+                color: 'rgb(226, 193, 131)'
+            - value:
+                text: "Application development and "
+            - value:
+                text: "a variety of programming languages, platforms, tools and libraries."
+                color: 'rgb(226, 193, 131)'
