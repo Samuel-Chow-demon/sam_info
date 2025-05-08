@@ -1,0 +1,37 @@
+ProgLang:
+  language: 
+    - text: "C"
+    - text: "C++"
+    - text: "python"
+    - text: "javascript"
+    - text: "java"
+    - text: "kotlin"
+    - text: "swift"
+
+  db:
+    - text: "fb"
+    - text: "mongodb"
+
+  ide:
+    - text: "vscode"
+    - text: "visualStudio"
+    - text: "jupyter"
+    - text: "eclipse"
+    - text: "intellij"
+    - text: "figma"
+
+  package:
+    - text: "html5"
+    - text: "css"
+    - text: "react"
+    - text: "tailwind"
+    - text: "threejs"
+    - text: "mui"
+    - text: "opencv"
+    - text: "ultralytics"
+
+  tool:
+    - text: "git"
+    - text: "github"
+    - text: "notion"
+    - text: "trello"
