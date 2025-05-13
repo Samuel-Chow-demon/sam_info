@@ -1,0 +1,149 @@
+title: Certificates & Publications
+category:
+  - cat: "Academic & Activities"
+  - cat: "Certificates"
+  - cat: "Publications"
+  - cat: "Patent"
+certNpub:
+  - cnp:
+      name: "Networking Essentials"
+      by: "Cisco Networking Academy"
+      category: "Certificates"
+      date: "19 Apr 2024"
+      link:
+        img: "ciscoNetEssen"
+        id: "VITE_FILE_11"
+  - cnp:
+      name: "IT Essentials"
+      by: "Cisco Networking Academy"
+      category: "Certificates"
+      date: "20 Dec 2023"
+      link:
+        img: "ciscoITEssen"
+        id: "VITE_FILE_10"
+
+  - cnp:
+      name: "JavaScript Alogrithms and Data Structures"
+      by: "freeCodeCamp"
+      category: "Certificates"
+      date: "18 Nov 2023"
+      link:
+        img: "jsCodeCamp"
+        href: "https://www.freecodecamp.org/certification/Samuel_Chow/javascript-algorithms-and-data-structures"
+
+  - cnp:
+      name: "CSMM.101x: Artificial Intelligence (AI)"
+      by: "Edx, Columbia University"
+      category: "Certificates"
+      date: "May 2021"
+      link:
+        img: "aiColumbiaX"
+        href: "https://courses.edx.org/certificates/134e06307900479fb0fd5e225ef5ee17"
+
+  - cnp:
+      name: "Transfer apparatus for transferring electronic devices"
+      by: "US Patent"
+      category: "Patent"
+      date: "16 Dec 2014"
+      link:
+        img: "patentTransDev"
+        href: "https://ppubs.uspto.gov/pubwebapp/external.html?q=(8910775).pn.&db=USPAT&type=ids"
+
+  - cnp:
+      name: "Shape Effect of Magnetic Source on Stabilizing Range of Vertical Diamagnetic Levitation"
+      by: "IEEE Transaction on Magnetics"
+      category: "Publications"
+      date: "06 Oct 2011"
+      link:
+        img: "pubShapeEffect"
+        href: "https://ieeexplore.ieee.org/document/6034526"
+
+  - cnp:
+      name: "Experimental study on stabilizing range extension of diamagnetic levitation under modulated magnetic field"
+      by: "Journal of Physics: Conference Series"
+      category: "Publications"
+      date: "04 Dec 2010"
+      link:
+        img: "pubExpStudy"
+        href: "https://iopscience.iop.org/article/10.1088/1742-6596/200/3/032013"
+
+  - cnp:
+      name: "Robocon 2008 - Co-instructor"
+      by: "The Hong Kong Institution of Engineers"
+      category: "Academic & Activities"
+      date: "22 Jun 2008"
+      link:
+        img: "robocon08"
+        id: "VITE_FILE_9"
+
+  - cnp:
+      name: "Robocon 2007 - Pit Crew Member"
+      by: "The Hong Kong Institution of Engineers"
+      category: "Academic & Activities"
+      date: "17 Jun 2007"
+      link:
+        img: "robocon07"
+        id: "VITE_FILE_8"
+
+  - cnp:
+      name: "Robocon 2006 - Game Field Member"
+      by: "The Hong Kong Institution of Engineers"
+      category: "Academic & Activities"
+      date: "25 Jun 2006"
+      link:
+        img: "robocon06"
+        id: "VITE_FILE_7"
+
+  - cnp:
+      name: "CMA and Donors Scholarship 06-07"
+      by: "City University of Hong Kong"
+      category: "Academic & Activities"
+      date: "2006"
+      link:
+        img: "cma06"
+        id: "VITE_FILE_6"
+
+  - cnp:
+      name: "Outstanding Student Award 2006"
+      by: "City University of Hong Kong"
+      category: "Academic & Activities"
+      date: "2006"
+      link:
+        img: "outstanding06"
+        id: "VITE_FILE_5"
+
+  - cnp:
+      name: "Li Po Chun Scholarship 06-07"
+      by: "City University of Hong Kong"
+      category: "Academic & Activities"
+      date: "2006"
+      link:
+        img: "liPoChun06"
+        id: "VITE_FILE_4"
+
+  - cnp:
+      name: "Department MEEMS Student Union Welfare Secretary"
+      by: "City University of Hong Kong, Manufacturing Eng. & Eng. Mgt. Department"
+      category: "Academic & Activities"
+      date: "2005"
+      link:
+        img: "welfareSec"
+        id: "VITE_FILE_1"
+
+  - cnp:
+      name: "Li Po Chun Scholarship 05-06"
+      by: "City University of Hong Kong"
+      category: "Academic & Activities"
+      date: "2005"
+      link:
+        img: "liPoChun05"
+        id: "VITE_FILE_2"
+
+  - cnp:
+      name: "Outstanding Student Award 2005"
+      by: "City University of Hong Kong"
+      category: "Academic & Activities"
+      date: "2005"
+      link:
+        img: "outstanding05"
+        id: "VITE_FILE_3"
