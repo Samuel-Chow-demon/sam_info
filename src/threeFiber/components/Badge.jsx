@@ -51,7 +51,7 @@ const Badge = ({id,
         return Math.random() * (max - min) + min;
     }
 
-    const randomRotationX = getRandomDouble(0.0025, 0.01);
+    const randomRotationX = getRandomDouble(0.005, 0.01);
 
     useEffect(()=>{
 
