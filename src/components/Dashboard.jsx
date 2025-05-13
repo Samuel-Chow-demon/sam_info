@@ -12,6 +12,7 @@ import About from './About'
 import Loading from './Loading'
 import Education from './Education'
 import WorkExperience from './WorkExperience'
+import CertAndPublicate from './CertAndPublicate'
 
 export const Dashboard = () => {
 
@@ -41,6 +42,9 @@ export const Dashboard = () => {
 
       case 2:
         return <WorkExperience />
+
+      case 4:
+        return <CertAndPublicate />
 
       default:
         return <></>;
