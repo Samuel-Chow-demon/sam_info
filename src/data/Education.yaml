@@ -1,0 +1,137 @@
+title: Education
+education:
+  - school:
+      icon: "vcc"
+      name: "Vancouver Community College"
+      program: 
+        text: "Diploma, Computer System Technology"
+        style:
+          fontSize: "22px"
+          color: "#c9bfa9"
+          marginLeft: "4rem"
+          marginBottom: '1rem'
+      grade:
+        text: "(Distinction)"
+        style:
+          fontSize: "22px"
+          color: "grey"
+          marginLeft: "4rem"
+      period: 
+        text: "Sep 2023 - Apr 2025"
+        style:
+          fontSize: "18px"
+          color: "grey"
+          marginLeft: "4rem"
+      content:
+        listGp:
+          - value:
+            style:
+              marginLeft: "4rem"
+              marginTop: "1rem"
+            list:
+              points:
+              - point: "design and develop software application for PC, Web, and Mobile devices"
+              - point: "design, analyze, develop, debug and optimize applications written in a variety of popular programming language such as Python, JavaScript, Java, C++, Kotlin and Swift"
+              - point: "collaborate efficiently as a software project team working with popular project development tools and development frameworks"
+              - point: "learn new tools and technologies independently following the latest trends in software and hardware"
+
+          - value:
+            style:
+              marginLeft: "4rem"
+              marginTop: "1rem"
+            list:
+              subheader:
+                text: "Hightlighted Courses:"
+                style:
+                    mb: '0.5em'
+              points:
+              - point: "CSTP1204 Software Analysis and Design"
+              - point: "CSTP2110 Introduction to Cloud Computing"
+              - point: "CSTP2107 Advanced Internet Programming & Web Applications"
+              - point: "CSTP2204 IT Development Project"
+              - point: "CSTP2301 Emerging Technologies (Machine Learning, Virtualization, Simulation, Artificial Intelligence etc.)"
+  
+  - school:
+      icon: "cityu"
+      name: "City University of Hong Kong"
+      program: 
+        text: "Master of Philosophy - MPhil., Physics and Engineering"
+        style:
+          fontSize: "22px"
+          color: "#c9bfa9"
+          marginLeft: "4rem"
+          marginBottom: '1rem'
+      period: 
+        text: "Oct 2007 - Mar 2010"
+        style:
+          fontSize: "18px"
+          color: "grey"
+          marginLeft: "4rem"
+
+      content:
+        listGp:
+          - value:
+            style:
+              marginLeft: "4rem"
+              marginTop: "1rem"
+            list:
+              subheader:
+                text: "Research Topic:"
+                style:
+                    mb: '0.5em'
+              points:
+              - point: "Experimental study on stabilizing range extension of diamagnetic levitation under modulated magnetic field"
+                style:
+                  href: "https://scholars.cityu.edu.hk/en/theses/theses(0610e0ed-28ec-4599-ac25-48dcf3c8ea50).html"
+          
+          - value:
+            style:
+              marginLeft: "4rem"
+              marginTop: "1rem"
+            list:
+              subheader:
+                text: "Activities and societies:"
+                style:
+                    mb: '0.5em'
+              points:
+              - point: "Research Assistant"
+              - point: "Tutor"
+
+  - school:
+      icon: "cityu"
+      name: "City University of Hong Kong"
+      program: 
+        text: "Bachelor of Engineering in Mechatronic Engineering (Honours)"
+        style:
+          fontSize: "22px"
+          color: "#c9bfa9"
+          marginLeft: "4rem"
+          marginBottom: '1rem'
+      grade:
+        text: "(1st Class Honours)"
+        style:
+          fontSize: "22px"
+          color: "grey"
+          marginLeft: "4rem"
+      period: 
+        text: "Sep 2004 - Apr 2007"
+        style:
+          fontSize: "18px"
+          color: "grey"
+          marginLeft: "4rem"
+
+      content:
+        listGp:
+          - value:
+            style:
+              marginLeft: "4rem"
+              marginTop: "1rem"
+            list:
+              subheader:
+                text: "Activities and societies:"
+                style:
+                    mb: '0.5em'
+              points:
+              - point: "Department Student Union Welfare Secretary"
+              - point: "Student Mentor"
+              - point: "Robocon Team Member, Instructor"

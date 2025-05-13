@@ -9,7 +9,27 @@ const PARAGRAPH_STYLE = {
     color: PARAGRAPH_COLOR,
     mb: '2em',
     textAlign: 'justify',
-    textIndent: '2em'
+    fontSize: "20px"
+}
+
+const LIST_STYLE = {
+    display: "flex",
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    color: PARAGRAPH_COLOR,
+    fontSize: "20px"
+}
+
+const LIST_ICON_STYLE = {
+    color: PARAGRAPH_COLOR,
+    fontSize: "1rem"
+}
+
+const LIST_POINT_STYLE = {
+    color: PARAGRAPH_COLOR,
+    textAlign: 'justify',
+    fontSize: "20px"
 }
 
 
@@ -18,5 +38,6 @@ export{
     INFO_COLOR,
     PARAGRAPH_COLOR,
     PARAGRAPH_BKGRD_COLOR,
-    PARAGRAPH_STYLE
+    PARAGRAPH_STYLE, 
+    LIST_STYLE, LIST_ICON_STYLE, LIST_POINT_STYLE
 };

@@ -10,6 +10,7 @@ import yaml from 'js-yaml'
 
 import About from './About'
 import Loading from './Loading'
+import Education from './Education'
 
 export const Dashboard = () => {
 
@@ -33,7 +34,9 @@ export const Dashboard = () => {
     {
       case 0:
         return <About />;
-        
+       
+      case 1:
+        return <Education />
       default:
         return <></>;
     }

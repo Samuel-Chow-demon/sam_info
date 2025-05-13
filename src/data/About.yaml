@@ -3,52 +3,66 @@ paragraph:
     - index: 0
       content:
         valueGp: 
-            - value: 
-                text: "Holding a "
-            - value: 
-                text: "First Class Honours"
+        - value: 
+            text: "Holding a "
+        - value: 
+            text: "First Class Honours"
+            style:
                 color: 'rgb(226, 193, 131)'
-            - value: 
-                text: " degree in "
-            - value:
-                text: "Mechatronic Engineering "
+        - value: 
+            text: " degree in "
+        - value:
+            text: "Mechatronic Engineering "
+            style:
                 color: 'rgb(226, 193, 131)'
-            - value:
-                text: "and a "
-            - value:
-                text: "Master of Philosophy "
+        - value:
+            text: "and a "
+        - value:
+            text: "Master of Philosophy "
+            style:
                 color: 'rgb(226, 193, 131)'
-            - value: 
-                text: "degree with research focused on diamagnetic levitation, specifically its extension and stability. My research insight the potential of diamagnetic levitation in enhancing micro- and nano-scale force sensing technologies."
+        - value: 
+            text: "degree with research focused on diamagnetic levitation, specifically its extension and stability. My research insight the potential of diamagnetic levitation in enhancing micro- and nano-scale force sensing technologies."
 
     - index : 1
       content:
         valueGp: 
-            - value:
-                text: "Work as a "
-            - value: 
-                text: "Software Engineer "
+        - value:
+            text: "Work as a "
+        - value: 
+            text: "Software Engineer "
+            style:
                 color: 'rgb(226, 193, 131)'
-            - value: 
-                text: "with over "
-            - value:
-                text: "12 years of experience in Object-Oriented Programming"
+        - value: 
+            text: "with over "
+        - value:
+            text: "12 years of experience in Object-Oriented Programming"
+            style:
                 color: 'rgb(226, 193, 131)'
-            - value:
-                text: ", I have specialized in "
-            - value:
-                text: "Semi-Conductor Manufacturing Robotics"
+        - value:
+            text: ", I have specialized in "
+        - value:
+            text: "Semi-Conductor Manufacturing Robotics"
+            style:
                 color: 'rgb(226, 193, 131)'
-            - value:
-                text: ", contributing to projects ranging from High-Speed chip LED Testing & Sorting Machines to Wafer-Embedded Chip / LED "
-            - value:
-                text: "Surface Mount Technology Bonding Machines"
+        - value:
+            text: ", contributing to projects ranging from High-Speed chip LED Testing & Sorting Machines to Wafer-Embedded Chip / LED "
+        - value:
+            text: "Surface Mount Technology Bonding Machines"
+            style:
                 color: 'rgb(226, 193, 131)'
-            - value:
-                text: ". Handled unit as small as down to 2 mil x 4 mil sized chip (1 mil == 0.0254 mm). An overview expertise involves:"
+        - value:
+            text: ". Handled unit as small as down to 2 mil x 4 mil sized chip (1 mil == 0.0254 mm)."
 
     - index: 2
+      style:
+        mb: '3em'
       list:
+        subheader:
+            text: "An overview expertise involves:"
+            style:
+                mb: '0.5em'
+        points:
         - point: "Conducting motion cycle and control research"
         - point: "Optimizing robotic production cycles (up to 60,000 UPH)"
         - point: "Developing machine application software with in-house vision systems and motor control"
@@ -58,28 +72,31 @@ paragraph:
     - index: 3
       subheader:
         text: "Samuel := INFINITY + 1"
-        size: "24px"
-        align: "center"
-        color: 'rgb(226, 193, 131)'
+        style:
+            fontSize: "24px"
+            textAlign: "center"
+            color: 'rgb(226, 193, 131)'
 
     - index: 4
       content:
         style:
-            margin:
-                mb: "0"
+            mb: "0"
         valueGp:
-            - value:
-                text: "— I embrace a mindset that welcome infinite possibilities to learn from others and the world. With humility, I acknowledge my weaknesses, face failures with optimism, and strive to turn shortcomings into strength for future challenges. This growth-oriented perspective has led me to expand my expertise in "
-            - value:
-                text: "Computer System Technology"
+        - value:
+            text: "— I embrace a mindset that welcome infinite possibilities to learn from others and the world. With humility, I acknowledge my weaknesses, face failures with optimism, and strive to turn shortcomings into strength for future challenges. This growth-oriented perspective has led me to expand my expertise in "
+        - value:
+            text: "Computer System Technology"
+            style:
                 color: 'rgb(226, 193, 131)'
-            - value: 
-                text: " to deepen my knowledege in "
-            - value:
-                text: "AI, Web & Mobile "
+        - value: 
+            text: " to deepen my knowledege in "
+        - value:
+            text: "AI, Web & Mobile "
+            style:
                 color: 'rgb(226, 193, 131)'
-            - value:
-                text: "Application development and "
-            - value:
-                text: "a variety of programming languages, platforms, tools and libraries."
+        - value:
+            text: "Application development and "
+        - value:
+            text: "a variety of programming languages, platforms, tools and libraries."
+            style:
                 color: 'rgb(226, 193, 131)'
