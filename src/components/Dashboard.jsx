@@ -11,6 +11,7 @@ import yaml from 'js-yaml'
 import About from './About'
 import Loading from './Loading'
 import Education from './Education'
+import WorkExperience from './WorkExperience'
 
 export const Dashboard = () => {
 
@@ -37,6 +38,10 @@ export const Dashboard = () => {
        
       case 1:
         return <Education />
+
+      case 2:
+        return <WorkExperience />
+
       default:
         return <></>;
     }
