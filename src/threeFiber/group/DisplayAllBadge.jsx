@@ -1,4 +1,4 @@
-import {useEffect, useState, Suspense, lazy} from 'react'
+import {useEffect, useState, Suspense, lazy, useRef} from 'react'
 
 import { Canvas } from '@react-three/fiber';
 
@@ -13,11 +13,23 @@ const DisplayAllBadge = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [allLanguages, setAllLanguages] = useState([]);
 
+    const canvasRef = useRef();
+
     useEffect(()=>{
+
+        const canvas = canvasRef.current;
+
         const allLang = yaml.load(proLang);
         setAllLanguages(allLang);
         console.log(allLang);
         setIsLoading(false);
+
+        return ()=>{
+            if (canvas && canvas.renderer)
+            {
+                canvas.renderer.dispose();
+            }
+        };
 
     }, [])
 
@@ -29,11 +41,14 @@ const DisplayAllBadge = () => {
 
                 // <Suspense fallback={<div>Loading 3D badges...</div>}>
                     <Canvas
+                        ref={canvasRef}
+                        // frameloop='demand'
                         onCreated={({ gl }) => {
                             gl.getContext().canvas.addEventListener('webglcontextlost', (e) => {
                             console.warn('WebGL context lost', e);
                             });
                         }}
+                        gl={{ preserveDrawingBuffer: false }}
                         orthographic
                         camera={{
                             zoom: 5,

@@ -36,6 +36,14 @@ import github from '../assets/tool/github.webp';
 import notion from '../assets/tool/notion.webp';
 import trello from '../assets/tool/trello.webp';
 
+// school
+import vcc from '../assets/school/vcc.webp'
+import cityu from '../assets/school/cityu.webp'
+
+// company
+import asmpt50 from '../assets/company/asmpt50.webp'
+import asm from '../assets/company/asm.webp'
+
 const iconTexture = {
 
     "C" : c,
@@ -68,7 +76,13 @@ const iconTexture = {
     "git" : git,
     "github" : github,
     "notion" : notion,
-    "trello" : trello
+    "trello" : trello,
+
+    "vcc" : vcc,
+    "cityu" : cityu,
+
+    "asmpt50" : asmpt50,
+    "asm" : asm
 }
 
 export default iconTexture;

@@ -2,7 +2,7 @@ import {useEffect, useState, useRef} from 'react'
 
 import Badge from '../components/Badge';
 
-import iconTexture from '../iconTexture'
+import iconTexture from '../../utility/iconTexture'
 
 const ProLangBadge = ({proLangList,
                       position=[0, 0, 0],
