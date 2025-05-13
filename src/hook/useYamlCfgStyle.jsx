@@ -1,0 +1,185 @@
+
+import { conditionalStyle } from '../utility/style';
+import {PARAGRAPH_STYLE,
+        LIST_STYLE, LIST_ICON_STYLE, LIST_POINT_STYLE} from '../script/constant'
+import { Box, Typography, List, ListItem, ListItemIcon } from '@mui/material';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import { memo } from 'react';
+
+const useYamlCfgStyle = () => {
+
+    // 1 - SubHeader Component
+    const TextComponent = memo(({id, paragObj, refKey, index, defaultStyle = {}})=>{
+
+        // Means there has a subheader
+        if (refKey in paragObj)
+        {
+            const style = conditionalStyle(paragObj[refKey].style,
+                                            paragObj[refKey].style); // .style already is a object of all styles
+
+            return(
+                <Typography key={`${id}-${refKey}-${index}`}
+                    sx={{...defaultStyle,       // apply default style
+                            ...style,           // then apply overwrite style
+                        }}>
+
+                    {paragObj[refKey].text}
+                </Typography>);
+        } 
+        return <></>; 
+    });
+
+    // 2 - List Component
+    const ListComponent = memo(({id, paragObj, index})=>{
+
+        // Means this sub section is a list
+        if ('list' in paragObj)
+        {
+            let listComponetList = [];
+
+            const styleObj = paragObj.style || {};
+
+            const style = conditionalStyle(styleObj, styleObj);
+
+            const iconSize = conditionalStyle(styleObj.iconSize,
+                                                {fontSize: styleObj.iconSize});
+
+            const listObj = paragObj.list;
+
+            const HeaderComponent = <TextComponent id={id} paragObj={listObj} refKey={'subheader'} index={index} defaultStyle={PARAGRAPH_STYLE}/>;
+
+            listComponetList.push(
+
+                <Box key={`${id}-list-${index}`} sx={{
+                    ...LIST_STYLE,
+                    ...style,
+                    }}>
+
+                    {HeaderComponent}
+
+                    <List dense>
+                        {
+                            listObj.points.map((item, idx)=>{
+
+                                let innerStyle = conditionalStyle(item.style, item.style);
+
+                                const hrefLink = conditionalStyle(innerStyle.href, innerStyle.href, "");
+
+                                let linkProps = {} // default not a link
+                                if (hrefLink != "")
+                                {
+                                    linkProps = {component: 'a', href:hrefLink, target: "_blank"}
+                                    innerStyle = {
+                                        ...innerStyle,
+                                        '&:hover' : {
+                                            textDecoration: "underline",
+                                            color : "#b867b0"
+                                        },
+                                        cursor: "pointer"
+                                    }
+                                }
+
+                                return(
+                                    <ListItem key={`${id}-list-${index}-${idx}`}>
+                                        <ListItemIcon>
+                                            <FiberManualRecordIcon sx={{
+                                                ...LIST_ICON_STYLE,
+                                                ...iconSize,
+                                                }}/>
+                                        </ListItemIcon>
+
+                                        <Typography
+                                            {...linkProps}
+                                            sx={{
+                                            ...LIST_POINT_STYLE,
+                                            ...innerStyle,
+                                            }}>
+                                            {item.point}
+                                        </Typography>
+                                        
+                                    </ListItem>
+                                );
+                            })
+                        }
+                    </List>
+                </Box>);
+
+            return listComponetList;
+        }
+        return <></>;
+    });
+
+
+    // 3 - Content Component
+    const ContentComponent = memo(({id, paragObj, index})=>{
+
+        // Means there has a content
+        if ('content' in paragObj)
+        {
+            let contentComponetList = [];
+
+            const style = conditionalStyle(paragObj.content.style,
+                                            paragObj.content.style);
+
+            if ('valueGp' in paragObj.content)
+            {
+                contentComponetList.push(
+    
+                    <Typography key={`${id}-content-valueGp-${index}`}
+                        sx={{
+                            ...PARAGRAPH_STYLE,
+                            ...style,
+                        }}>
+                    {
+                        paragObj.content.valueGp.map((contentObj, idx)=>{         
+    
+                            const valueObj = contentObj['value'];
+    
+                            const innerStyle = conditionalStyle(valueObj.style,
+                                                                valueObj.style);
+
+                            return (
+                                <span key={`${id}-parag-${index}-${idx}`} 
+                                    style={{
+                                        ...innerStyle,
+                                        }}>
+                                    
+                                    {valueObj.text}
+                                </span>);
+                        })
+                    }
+                    </Typography>
+                );
+            }
+            else if ('listGp' in paragObj.content)
+            {
+                const listGp = paragObj.content.listGp;
+
+                listGp.forEach((listObj, idx)=>{
+
+                    contentComponetList.push(
+                        <ListComponent id={id} key={`${id}-ListCom-${index}-${idx}`} paragObj={listObj} index={idx}/>
+                    );
+                });
+            }
+
+            return contentComponetList.length ? contentComponetList : <></>;
+        }
+        return <></>;
+    });
+
+                                
+
+
+
+
+
+    return {
+        TextComponent,
+        ListComponent,
+        ContentComponent
+
+    };
+}
+
+export default useYamlCfgStyle
