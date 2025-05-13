@@ -1,0 +1,279 @@
+title: Work Experience
+workexp:
+  - company:
+      icon: "asmpt50"
+      name: "ASMPT Technology Hong Kong Limited"
+      title: 
+        text: "Senior Software Engineer"
+        style:
+          fontSize: "22px"
+          color: "#c9bfa9"
+          paddingLeft: "4rem"
+          paddingBottom: '1rem'
+      period:
+        text: "Jul 2015 - Apr 2023"
+        style:
+          fontSize: "20px"
+          color: "grey"
+      mode:
+        text: "On-Site, Permanent Full-Time"
+        style:
+          fontSize: "18px"
+          color: "grey"
+          marginLeft: "4rem"
+      location: 
+        text: "Tsing Yi, Hong Kong"
+        style:
+          fontSize: "18px"
+          color: "grey"
+          marginLeft: "4rem"
+
+      content:
+        listGp:
+          - value:
+            style:
+              marginLeft: "4rem"
+              marginTop: "1rem"
+            list:
+              subheader:
+                  text: "Research & Design:"
+                  style:
+                      mb: '0.5em'
+                      color: '#bdae77'
+              points:
+              - point: "Leading research for machine module process overlap, including inspection of Rotary with Arms, Rotary Motor with self Up Down and Up Down Arm Action"
+              - point: "Cooperate with Netherlands Motion Research Team on developing Motor Auto Tuning functionality (in-house filter control algorithm to adapt 10um accuracy in 5ms)"
+              - point: "Conducting production algorithm and software enhancement for machine capability, state machine module logging, software resources memory and processing optimization etc."
+
+          - value:
+            style:
+              marginLeft: "4rem"
+              marginTop: "1rem"
+            list:
+              subheader:
+                  text: "Machine Model Software Responsible (Development, Management & Maintenance)"
+                  style:
+                      mb: '0.5em'
+                      color: '#bdae77'
+              points:
+              - point: Conducting source code or repository management through Git Implementation
+              - point: "Reponsible for Wafer To Wafer / Panel (Surface Mount) Model: Vortex 2"
+              - point: "Reponsible for LED Test & Sort Model : PS600T, PS600B, PS680, PS680T"
+              - point: "Reponsible for LED Test & Tape Model : SLT400Plus"
+
+          - value:
+            style:
+              marginLeft: "4rem"
+              marginTop: "1rem"
+            list:
+              subheader:
+                  text: "In-house Support & Customer Tailor Services"
+                  style:
+                      mb: '0.5em'
+                      color: '#bdae77'
+              points:
+              - point: "Providing Software Tools for Company Field / Service Engineer to handle customer issues"
+              - point: "Conduct in-house consultations for machines to production and manufacturing colleagues regarding machine process failure, machine settings and machine optimization problems"
+              - point: "Support customer request on machine configuration portability to extract and import machine device settings for factory centralization control"
+              - point: "Tailor Lot Management System for different customers with report generations, database utilization and device control centralization execution"
+              - point: "Ensuring machines fulfill client needs and satisfying more than 30 worldwide clients including LumiLEDs, Dominant, GREE, LEXSTAR, Sanken and more"
+
+  - company:
+      icon: "asmpt50"
+      name: "ASMPT Technology Hong Kong Limited"
+      title: 
+        text: "Software Engineer I (E1)"
+        style:
+          fontSize: "22px"
+          color: "#c9bfa9"
+          paddingLeft: "4rem"
+          paddingBottom: '1rem'
+      period:
+        text: "Jul 2013 - Jun 2015"
+        style:
+          fontSize: "20px"
+          color: "grey"
+      mode:
+        text: "On-Site, Permanent Full-Time"
+        style:
+          fontSize: "18px"
+          color: "grey"
+          marginLeft: "4rem"
+      location: 
+        text: "Kwai Chung, Hong Kong (former office)"
+        style:
+          fontSize: "18px"
+          color: "grey"
+          marginLeft: "4rem"
+
+      content:
+        listGp:
+          - value:
+            style:
+              marginLeft: "4rem"
+              marginTop: "1rem"
+            list:
+              subheader:
+                  text: "Research & Design:"
+                  style:
+                      mb: '0.5em'
+                      color: '#bdae77'
+              points:
+              - point: "Cooperated with in-house motion control team on researching and developing specific motor motion features, such as Robot Arm Soft Touch Capability and Detection"
+              - point: "Performed statistical logging and moderated air blowing time or pulsing mode to optimize purging pressure and boost efficiency for sorting robot with at most 256 tubes"
+              - point: "New machine model module development design and test with testing software application"
+
+          - value:
+            style:
+              marginLeft: "4rem"
+              marginTop: "1rem"
+            list:
+              subheader:
+                  text: "Machine Model Software Responsible (Development, Management & Maintenance)"
+                  style:
+                      mb: '0.5em'
+                      color: '#bdae77'
+              points:
+              - point: Conducting source code or repository management through Git Implementation
+              - point: "Reponsible for LED Test & Sort Model : PS500T, SLS230TPlus, IP360BN"
+              - point: "Reponsible for LED Test & Tape Model : SLT400, SLT400Plus"
+
+          - value:
+            style:
+              marginLeft: "4rem"
+              marginTop: "1rem"
+            list:
+              subheader:
+                  text: "In-house Support & Customer Tailor Services"
+                  style:
+                      mb: '0.5em'
+                      color: '#bdae77'
+              points:
+              - point: "Develop robot module tailored features and precaution handling on processing customer fragile and scratch free high-end units"
+              - point: "Conduct in-house consultations for machines to production and manufacturing colleagues regarding machine process failure, machine settings and machine optimization problems"
+              - point: "Develop automated PC digitial cleaning and backup tools for in-house manufacturing production process"
+              - point: "Documented with procedures and menu for tailor customer support"
+
+  - company:
+      icon: "asmpt50"
+      name: "ASMPT Technology Hong Kong Limited"
+      title: 
+        text: "Software Engineer II (E2)"
+        style:
+          fontSize: "22px"
+          color: "#c9bfa9"
+          paddingLeft: "4rem"
+          paddingBottom: '1rem'
+      period:
+        text: "Aug 2010 - Jun 2013"
+        style:
+          fontSize: "20px"
+          color: "grey"
+      mode:
+        text: "On-Site, Permanent Full-Time"
+        style:
+          fontSize: "18px"
+          color: "grey"
+          marginLeft: "4rem"
+      location: 
+        text: "Kwai Chung, Hong Kong (former office)"
+        style:
+          fontSize: "18px"
+          color: "grey"
+          marginLeft: "4rem"
+
+      content:
+        listGp:
+          - value:
+            style:
+              marginLeft: "4rem"
+              marginTop: "1rem"
+            list:
+              subheader:
+                  text: "Research & Design:"
+                  style:
+                      mb: '0.5em'
+                      color: '#bdae77'
+              points:
+              - point: "Designed and optimized pneumatic system through oscilloscope for electrical (valve, sensor) and physical response (High Speed Camera)"
+              - point: "Designed Unit Feeding (Input) Timing Sequence and implemented into several pre-designed models on LED unit type in existing market"
+              - point: "Designed MCU program on automating the least necessary valves as a standalone transferring aided advice (US Patented)"
+              - point: "Developed Robot Input Timing Chart Sequence, adopting standard combination sequences of pneumatic work into the system"
+
+          - value:
+            style:
+              marginLeft: "4rem"
+              marginTop: "1rem"
+            list:
+              subheader:
+                  text: "Machine Model Software Responsible (Development, Management & Maintenance)"
+                  style:
+                      mb: '0.5em'
+                      color: '#bdae77'
+              points:
+              - point: Conducting source code or repository management through Git Implementation
+              - point: "Reponsible for LED Test & Sort Model : SLS230, SLS230T, SLS200T, SLS200C"
+              - point: "Reponsible for LED Test & Tape Model : SLT400, SLT400BW"
+
+          - value:
+            style:
+              marginLeft: "4rem"
+              marginTop: "1rem"
+            list:
+              subheader:
+                  text: "In-house Support & Customer Tailor Services"
+                  style:
+                      mb: '0.5em'
+                      color: '#bdae77'
+              points:
+              - point: "Optimized Robot UPH (Unit-per-Hour) for various customer products"
+              - point: "Provided in-house production support to manufacturing engineer by aiding software tool development and helping debug machine running processes"
+
+  - company:
+      icon: "cityu"
+      name: "City University of Hong Kong"
+      title: 
+        text: "Research Assistant"
+        style:
+          fontSize: "22px"
+          color: "#c9bfa9"
+          paddingLeft: "4rem"
+          paddingBottom: '1rem'
+      period:
+        text: "Jan 2010 - Aug 2010"
+        style:
+          fontSize: "20px"
+          color: "grey"
+      mode:
+        text: "On-Site, Full-Time"
+        style:
+          fontSize: "18px"
+          color: "grey"
+          marginLeft: "4rem"
+      location: 
+        text: "Kowloon, Hong Kong"
+        style:
+          fontSize: "18px"
+          color: "grey"
+          marginLeft: "4rem"
+
+      content:
+        listGp:
+          - value:
+            style:
+              marginLeft: "4rem"
+              marginTop: "1rem"
+            list:
+              subheader:
+                  text: "Research & Design:"
+                  style:
+                      mb: '0.5em'
+                      color: '#bdae77'
+              points:
+              - point: "Designed Experiment Test Jig for Vertical Diamagnetic Levitation"
+              - point: "Study Diamagnetic Levitation Stabilizing Range Extension under Shape Effect of Magnetic Source"
+              - point: "Study Vertical Diamagnetic Levitation Spring Force Modulation"
+   
+
+
+
