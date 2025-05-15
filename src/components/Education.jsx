@@ -1,4 +1,4 @@
-import {memo, useEffect, useState} from 'react'
+import {memo, useEffect, useRef, useState} from 'react'
 import Loading from './Loading';
 
 import { Box, Stepper, Step, StepContent, StepLabel, Button, Zoom } from '@mui/material'
@@ -14,13 +14,17 @@ import ExpandCircleDownOutlinedIcon from '@mui/icons-material/ExpandCircleDownOu
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
 
 import IconComponent from './IconComponent'
+import ScrollButtonComponent from './ScrollButtonComponent';
 
 const Education = () => {
   
-    const [activeIdx, setActiveIdx] = useState(0);
     const [section, setSection] = useState([]);
 
     const [isLoading, setIsLoading] = useState(true);
+
+    const contentShowMoreObjRef = useRef({});
+    const stepLabelDOM = useRef({});
+
     
     const {
         TextComponent,
@@ -35,21 +39,37 @@ const Education = () => {
 
     }, []);
 
-    const handleClickIdx = (index) => () => {
-        setActiveIdx(index);
-    };
+    const storeStepLabelDOM = (index)=>(dom)=>{
+        stepLabelDOM.current[index] = dom;
+    }
+
+    // const clickPrintPos = ()=>{
+
+    //     console.log("window height", window.innerHeight);
+    //     console.log("Y height", rootDom.offsetHeight);
+    //     console.log("Y scroll", rootDom.scrollTop);
+ 
+    //     Object.values(stepLabelDOM.current).forEach((dom, idx)=>{
+    //         console.log(`${idx} - ${dom.offsetTop}`);
+    //     })
+    //     Object.values(contentStepDOM.current).forEach((dom, idx)=>{
+    //         console.log(`Content Height ${idx} - ${dom.offsetHeight}`);
+    //     })
+    // }
 
     const Content = ()=>{
 
         return (
     
-            <Stepper nonLinear activeStep={activeIdx} orientation="vertical">
+            <Stepper nonLinear 
+            //activeStep={activeIdx} 
+            orientation="vertical">
 
                 {
                     section.education.map((item, index)=>{
-
+     
                         return(
-                            <EducationStepComponent key={`${item.school.name}-${index}`} id={'edu'} schoolObj={item.school} index={index} active={activeIdx === index}/>
+                            <EducationStepComponent key={`${item.school.name}-${index}`} id={'edu'} schoolObj={item.school} index={index} active={true}/>
                         );
                     })
                 }        
@@ -64,6 +84,13 @@ const Education = () => {
 
         const [showMore, setShowMore] = useState(false);
 
+        useEffect(()=>{
+
+            contentShowMoreObjRef.current[index] = {
+                    showMore, setShowMore
+                }
+        }, []);
+
         const IconWrapper = ()=>(
             <IconComponent iconTag={schoolObj.icon}/>
         )
@@ -75,7 +102,7 @@ const Education = () => {
                     error={"false"}
             >
                 <StepLabel 
-                
+                    ref={storeStepLabelDOM(index)}
                     slots={{
                         stepIcon: IconWrapper
                     }}
@@ -96,8 +123,10 @@ const Education = () => {
                         {schoolObj.name}
                 </StepLabel>
                 
-                <StepContent>
-                    <Box sx={{
+                <StepContent
+                >
+                    <Box 
+                        sx={{
                         width : '100%',
                         display: 'flex',
                         flexDirection: 'column',
@@ -105,6 +134,8 @@ const Education = () => {
                         alignItems: 'flex-start',
                         gap: '5px'
                     }}>
+                        {/* <button onClick={clickPrintPos}>Print</button> */}
+
                         <TextComponent id={id} paragObj={schoolObj} refKey={'program'} index={index}/>
                         <TextComponent id={id} paragObj={schoolObj} refKey={'grade'} index={index}/>
                         <TextComponent id={id} paragObj={schoolObj} refKey={'period'} index={index}/>
@@ -139,7 +170,6 @@ const Education = () => {
                 
             </Step>
         )
-
     });
   
     return (
@@ -148,7 +178,11 @@ const Education = () => {
                 isLoading ?
                 <Loading /> :
 
-                <ContentContainer contentComponent={<Content />} title={section.title} />
+                <>
+                    <ScrollButtonComponent stepLabelDomRef={stepLabelDOM}/>
+                    <ContentContainer contentComponent={<Content />} title={section.title} 
+                                      showMoreObjRef={contentShowMoreObjRef} />
+                </>
             }
         </>
     );

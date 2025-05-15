@@ -1,4 +1,4 @@
-import {memo, useEffect, useState} from 'react'
+import {memo, useEffect, useRef, useState} from 'react'
 import Loading from './Loading';
 
 import { Box, Stepper, Step, StepContent, StepLabel,
@@ -15,13 +15,16 @@ import ExpandCircleDownOutlinedIcon from '@mui/icons-material/ExpandCircleDownOu
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
 
 import IconComponent from './IconComponent'
+import ScrollButtonComponent from './ScrollButtonComponent';
 
 const WorkExperience = () => {
   
-    const [activeIdx, setActiveIdx] = useState(0);
     const [section, setSection] = useState([]);
 
     const [isLoading, setIsLoading] = useState(true);
+
+    const contentShowMoreObjRef = useRef({});
+    const stepLabelDOM = useRef({});
     
     const {
         TextComponent,
@@ -36,21 +39,23 @@ const WorkExperience = () => {
 
     }, []);
 
-    const handleClickIdx = (index) => () => {
-        setActiveIdx(index);
-    };
+    const storeStepLabelDOM = (index)=>(dom)=>{
+        stepLabelDOM.current[index] = dom;
+    }
 
     const Content = ()=>{
 
         return (
     
-            <Stepper nonLinear activeStep={activeIdx} orientation="vertical">
+            <Stepper nonLinear 
+            // activeStep={activeIdx} 
+            orientation="vertical">
 
                 {
                     section.workexp.map((item, index)=>{
 
                         return(
-                            <WorkExpStepComponent key={`${item.company.name}-${index}`} id={'company'} compObj={item.company} index={index} active={activeIdx === index}/>
+                            <WorkExpStepComponent key={`${item.company.name}-${index}`} id={'company'} compObj={item.company} index={index} active={true}/>
                         );
                     })
                 }        
@@ -69,6 +74,13 @@ const WorkExperience = () => {
             <IconComponent iconTag={compObj.icon}/>
         )
 
+         useEffect(()=>{
+        
+            contentShowMoreObjRef.current[index] = {
+                    showMore, setShowMore
+                }
+        }, []);
+
         return (
             <Step key = {compObj.name}
                     active = {active ? "true" : "false"}
@@ -76,7 +88,7 @@ const WorkExperience = () => {
                     error={"false"}
             >
                 <StepLabel 
-                
+                    ref={storeStepLabelDOM(index)}
                     slots={{
                         stepIcon: IconWrapper
                     }}
@@ -162,7 +174,11 @@ const WorkExperience = () => {
                 isLoading ?
                 <Loading /> :
 
-                <ContentContainer contentComponent={<Content />} title={section.title} />
+                <>
+                    <ScrollButtonComponent stepLabelDomRef={stepLabelDOM}/>
+                    <ContentContainer contentComponent={<Content />} title={section.title} 
+                                    showMoreObjRef={contentShowMoreObjRef}/>
+                </>
             }
         </>
     );
