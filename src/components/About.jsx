@@ -24,6 +24,7 @@ const About = () => {
 
     useEffect(()=>{
         const data = yaml.load(aboutYamlFile);
+
         setSection(data);
         setIsLoading(false);
 
