@@ -6,6 +6,11 @@ import { Box, Typography, List, ListItem, ListItemIcon } from '@mui/material';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import { memo } from 'react';
 
+import IconComponent from '../components/IconComponent'
+import {defaultTextControl, 
+        ProgressBarWithLabel} from '../components/ProgressBarWithLabel';
+import { grey } from '@mui/material/colors';
+
 const useYamlCfgStyle = () => {
 
     // 1 - SubHeader Component
@@ -57,13 +62,19 @@ const useYamlCfgStyle = () => {
 
                     {HeaderComponent}
 
-                    <List dense>
+                    <List sx={{
+                        width: "100%"
+                    }} dense>
                         {
                             listObj.points.map((item, idx)=>{
 
                                 let innerStyle = conditionalStyle(item.style, item.style);
 
                                 const hrefLink = conditionalStyle(innerStyle.href, innerStyle.href, "");
+
+                                const iconStyle = conditionalStyle(innerStyle.icon, innerStyle.icon);
+
+                                const pointStyle = conditionalStyle(innerStyle.point, innerStyle.point);
 
                                 let linkProps = {} // default not a link
                                 if (hrefLink != "")
@@ -79,23 +90,66 @@ const useYamlCfgStyle = () => {
                                     }
                                 }
 
-                                return(
+                                return(    
                                     <ListItem key={`${id}-list-${index}-${idx}`}>
-                                        <ListItemIcon>
-                                            <FiberManualRecordIcon sx={{
-                                                ...LIST_ICON_STYLE,
-                                                ...iconSize,
-                                                }}/>
+                                        <ListItemIcon
+                                            sx={{
+                                                alignSelf: 'flex-start',
+                                                marginTop: '0.4rem'
+                                            }}
+                                        
+                                        >
+
+                                            {
+                                                ('icon' in item) ?
+                                                <IconComponent iconTag={item.icon} style={iconStyle}/>
+                                                :
+                                                <FiberManualRecordIcon sx={{
+                                                    ...LIST_ICON_STYLE,
+                                                    ...iconSize,
+                                                    }}/>
+                                            }
                                         </ListItemIcon>
 
-                                        <Typography
-                                            {...linkProps}
-                                            sx={{
-                                            ...LIST_POINT_STYLE,
-                                            ...innerStyle,
-                                            }}>
-                                            {item.point}
-                                        </Typography>
+                                        <Box sx={{width: '100%', height: '100%', ...pointStyle}}>
+                                            {
+                                                (item.point) ?
+                                                <Typography
+                                                    {...linkProps}
+                                                    sx={{
+                                                    ...LIST_POINT_STYLE,
+                                                    ...innerStyle,
+                                                    }}>
+                                                    {item.point}
+                                                </Typography> : null
+                                            }
+
+                                            {
+                                                ('content' in item) ?
+                                                <ContentComponent id={id} paragObj={item} index={index} /> : null
+                                            }
+
+                                            {
+                                                ('bar' in item) ?
+                                                <ProgressBarWithLabel 
+                                                    value={item.bar.value} 
+                                                    full={item.bar.full}
+                                                    textControl={{
+                                                        ...defaultTextControl,
+                                                        isPercentageStyle: false
+                                                    }}
+                                                    componentStyle={{
+                                                        width: '100%'
+                                                    }}
+                                                    textStyle={{
+                                                        fontSize: '1.2rem',
+                                                        color: grey
+                                                    }}
+                                                    
+                                                    />
+                                                : null
+                                            }
+                                        </Box>
                                         
                                     </ListItem>
                                 );
