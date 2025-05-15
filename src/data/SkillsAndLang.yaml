@@ -1,0 +1,207 @@
+title: Skills & Languages
+content:
+  listGp:
+    - value:
+        style:
+          mb: '3rem'
+        list:
+          subheader:
+            text: "Programming Languages:"
+            style:
+                fontSize: '22px'
+                mb: '0.5em'
+                color: '#bdae77'
+          points:
+          - point:
+            style:
+              icon:
+                width: "3.5rem"
+                height: "3.5rem"
+            icon: "C++"
+            bar:
+              value: 8
+              full: 10
+          - point:
+            style:
+              icon:
+                width: "3.5rem"
+                height: "3.5rem"
+            icon: "C"
+            bar:
+              value: 8
+              full: 10
+          - point:
+            style:
+              icon:
+                width: "3.5rem"
+                height: "3.5rem"
+            icon: "python"
+            bar:
+              value: 7
+              full: 10
+          - point:
+            style:
+              icon:
+                width: "3.5rem"
+                height: "3.5rem"
+            icon: "javascript"
+            bar:
+              value: 7
+              full: 10
+          - point:
+            style:
+              icon:
+                width: "3.5rem"
+                height: "3.5rem"
+            icon: "java"
+            bar:
+              value: 6
+              full: 10
+          - point:
+            style:
+              icon:
+                width: "3.5rem"
+                height: "3.5rem"
+            icon: "kotlin"
+            bar:
+              value: 6
+              full: 10
+          - point:
+            style:
+              icon:
+                width: "3.5rem"
+                height: "3.5rem"
+            icon: "swift"
+            bar:
+              value: 5
+              full: 10
+
+    - value:
+        style:
+          mb: '3rem'
+        list:
+          subheader:
+            text: "Database, Library, Framework, IDE, Tools"
+            style:
+                fontSize: '22px'
+                mb: '0.5em'
+                color: '#bdae77'
+          points:
+          - point: "Firebase, MongoDB"
+          - point: "React, React-Vite, MUI, ThreeJS, R3F, Tailwind CSS, HTML, CSS"
+          - point: "Git, GitHub"
+          - point: "VSCode, Visual Studio, Jupyter Lab / Notebook, Eclipse, IntelliJ, Figma, Android Studio, XCode"
+          - point: "Notion, Trello"
+
+    - value:
+        style:
+          mb: '3rem'
+        list:
+          subheader:
+            text: "Mechatronics Engineer:"
+            style:
+                fontSize: '22px'
+                mb: '0.5em'
+                color: '#bdae77'
+          points:
+          - point: "MCU Programming with device to machine robots"
+          - point: "Robotic Automations, Motor Motion Control Knowledge"
+          - point: "LED Optical Inspection (AOI) and Sorting"
+          - point: "Mini / Micro LED Surface Mount Technology"
+            content:
+              listGp:
+                - value:
+                    list:
+                      points:
+                      - point: "Wafer to PCB"
+                      - point: "Wafer to Wafer"
+                      - point: "Wafer to Display Panel"
+          - point: "Encoder Test - Motion End Performance Test"
+          - point: "Machine Automation Features"
+            content:
+              listGp:
+                - value:
+                    list:
+                      points:
+                      - point: "Auto position-limit search"
+                      - point: "Iterative control learning"
+                      - point: "Motion space-timing optimization"
+
+    - value:
+        style:
+          mb: '3rem'
+        list:
+          subheader:
+            text: "Languages:"
+            style:
+                fontSize: '22px'
+                mb: '0.5em'
+                color: '#bdae77'
+          points:
+          - point: "English"
+            style:
+                point:
+                  display: 'flex'
+                  flexDirection: 'column'
+                  justifyContent: 'center'
+                  alignItems: 'flex-start'
+            content:
+              style:
+                mb: '0'
+              valueGp:
+              - value: 
+                  text: "Full professional proficiency"
+                  style:
+                    fontSize: "16px"
+                    color: "grey"
+                 
+          - point: "Cantonese"
+            style:
+                point:
+                  display: 'flex'
+                  flexDirection: 'column'
+                  justifyContent: 'center'
+                  alignItems: 'flex-start'
+            content:
+              style:
+                mb: '0'
+              valueGp:
+              - value: 
+                  text: "Native or bilingual proficiency"
+                  style:
+                    fontSize: "16px"
+                    color: "grey"
+
+          - point: "Mandarin"
+            style:
+                point:
+                  display: 'flex'
+                  flexDirection: 'column'
+                  justifyContent: 'center'
+                  alignItems: 'flex-start'
+            content:
+              style:
+                mb: '0'
+              valueGp:
+              - value: 
+                  text: "Native or bilingual proficiency"
+                  style:
+                    fontSize: "16px"
+                    color: "grey"
+
+          - point: "Japanese"
+            style:
+                point:
+                  display: 'flex'
+                  flexDirection: 'column'
+                  justifyContent: 'center'
+                  alignItems: 'flex-start'
+            content:
+              style:
+                mb: '0'
+              valueGp:
+              - value: 
+                  text: "Elementary proficiency"
+                  style:
+                    fontSize: "16px"
+                    color: "grey"
