@@ -21,7 +21,6 @@ const DisplayAllBadge = () => {
 
         const allLang = yaml.load(proLang);
         setAllLanguages(allLang);
-        console.log(allLang);
         setIsLoading(false);
 
         return ()=>{

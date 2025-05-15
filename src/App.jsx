@@ -9,7 +9,8 @@ function App() {
   
   return (
     <>
-      <Box sx={{
+      <Box 
+      sx={{
         width: '100%',
         minHeight: '100vh',
         backgroundImage: `url(${bgImage})`,
@@ -27,7 +28,6 @@ function App() {
             <Dashboard/>
           </Grid>
         </Grid>
-
       </Box>
     </>
   )

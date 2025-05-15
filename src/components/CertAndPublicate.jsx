@@ -34,7 +34,7 @@ const CertAndPublicate = () => {
         };
         setSection(data);
 
-        console.log(data);
+        //console.log(data);
 
         setIsLoading(false);
 
@@ -144,8 +144,6 @@ const CertAndPublicate = () => {
     const CardComponent = memo(({id, compObj, index})=>{
 
         const width = 400;
-
-        console.log(compObj);
 
         return (
             <Tooltip title="click to document URL / reference">
