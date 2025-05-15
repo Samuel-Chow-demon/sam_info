@@ -13,6 +13,7 @@ import Loading from './Loading'
 import Education from './Education'
 import WorkExperience from './WorkExperience'
 import CertAndPublicate from './CertAndPublicate'
+import SkillAndLang from './SkillAndLang'
 
 export const Dashboard = () => {
 
@@ -45,6 +46,9 @@ export const Dashboard = () => {
 
       case 4:
         return <CertAndPublicate />
+      
+      case 5:
+        return <SkillAndLang />
 
       default:
         return <></>;
