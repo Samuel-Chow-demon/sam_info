@@ -155,10 +155,10 @@ const useYamlCfgStyle = () => {
             {
                 const listGp = paragObj.content.listGp;
 
-                listGp.forEach((listObj, idx)=>{
+                listGp.forEach((listItem, idx)=>{
 
                     contentComponetList.push(
-                        <ListComponent id={id} key={`${id}-ListCom-${index}-${idx}`} paragObj={listObj} index={idx}/>
+                        <ListComponent id={id} key={`${id}-ListCom-${index}-${idx}`} paragObj={listItem.value} index={idx}/>
                     );
                 });
             }
@@ -167,12 +167,6 @@ const useYamlCfgStyle = () => {
         }
         return <></>;
     });
-
-                                
-
-
-
-
 
     return {
         TextComponent,
