@@ -1,0 +1,98 @@
+title: Portfolio
+category:
+  - cat: "AI"
+  - cat: "Robocon"
+  - cat: "Work Exp"
+  - cat: "Client & Server"
+  - cat: "Web Application"
+  - cat: "Games"
+  - cat: "UI/UX"
+  - cat: "AWS"
+
+projNapp:
+  - pna:
+      name: "MazeRunner"
+      category: "Client & Server"
+      lang: 
+        icon: "java"
+      ide: 
+        icon: "eclipse"
+      img:
+        src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST1303_MazeRunner/main/pic/MazeRunner.webp"
+        style:
+          borderRadius: '0.5rem'
+
+page:
+  MazeRunner:
+    title: 
+      text: "A Maze-ing Runner"
+      style:
+        fontSize: "2rem"
+        color: "#c9bfa9"
+    lang: 
+      icon: "java"
+    ide: 
+      icon: "eclipse"
+    github: 
+      link: "https://github.com/Samuel-Chow-demon/CST1303_MazeRunner"
+      text: "GitHub & ReadME"
+    deploy: ""
+    img:
+        src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST1303_MazeRunner/main/pic/MazeRunner.webp"
+        style:
+          width: '5rem'
+          height: '5rem'
+          borderRadius: '3rem'
+    
+    description:
+      style:
+        mb: '2rem'
+      list:
+        subheader:
+          text: "Project Description"
+          style:
+              fontSize: '22px'
+              mb: '0.5em'
+              color: '#bdae77'
+        points:
+        - point: "This project is a Java-based 2D real-time multiplayer maze runner game that introduces dedicated server and client services to enable smooth and synchronized gameplay"
+        - point: "Players act as clients who navigate through a dynamic maze with the objective of reaching the finish point before their opponents to claim victory"
+        - point: "The server functions as a central router, managing connections between players. It receives real-time game state updates from each client (such as position, actions, or events), processes them, and broadcasts the synchronized game state back to all connected clients. This ensures a consistent and competitive multiplayer experience"
+
+    images:
+      subheader:
+        text: "Images"
+        style:
+            width: '100%'
+            fontSize: '22px'
+            mt: '1rem'
+            mb: '0.1em'
+            color: '#bdae77'
+      imgList:
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST1303_MazeRunner/main/pic/diagram1.webp"
+            hover: true
+            style:
+              width: '15rem'
+              height: '15rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST1303_MazeRunner/main/pic/diagram2.webp"
+            hover: true
+            style:
+              width: '15rem'
+              height: '15rem'
+              borderRadius: '0.5rem'
+
+    video:
+      subheader:
+        text: "Demo"
+        style:
+            width: '100%'
+            fontSize: '22px'
+            mt: '1rem'
+            mb: '0.1em'
+            color: '#bdae77'
+      link: "https://player.vimeo.com/video/1084814578?badge=0&autopause=0&player_id=0&portrait=0&byline=0&share=0&app_id=58479"
+
