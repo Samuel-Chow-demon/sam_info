@@ -2,7 +2,7 @@ import {memo, useEffect, useState} from 'react'
 import Loading from './Loading';
 
 import { Box,
-         Card, CardHeader, CardMedia, Grid, Stack, 
+         Card, CardHeader, CardMedia, Grid, 
          Tab, 
          Tabs,
          Tooltip} from '@mui/material'
@@ -59,7 +59,7 @@ const CertAndPublicate = () => {
 
         if (link)
         {
-            window.open(link, '_blank');
+            window.open(link, '_blank', "noopener, noreferrer");
         }
     }
 
@@ -70,6 +70,7 @@ const CertAndPublicate = () => {
                 spacing={{xs: 2, md: 3}}
                 columns={{xs: 4, sm: 8, md: 12}}
                 sx={{
+                    width: '100%',
                     marginTop: '2rem'
                 }}>
                 
@@ -80,8 +81,9 @@ const CertAndPublicate = () => {
                         return ((obj.cnp.category === category || 
                                  category === allCategoryKey) ?
     
-                            <Grid key={`${id}-gridcard-${index}`}
-                                size={{ xs:2, sm: 4, md: 3}}>
+                            <Grid item key={`${id}-gridcard-${index}`}
+                                size={{xs:2, sm: 4, md: 4}}    
+                            >
     
                                 <CardComponent id={id} compObj={obj.cnp} index={index}/>
     
@@ -99,38 +101,50 @@ const CertAndPublicate = () => {
         return (
     
            <>
-            <Box sx={{width : '100%'}}>
-                <Tabs
-                    value={category}
-                    onChange={handleTabChange}
-                    //textColor= 'secondary'
-                    // indicatorColor = 'secondary'
-                    aria-label = "category tabs"
-                    sx={{
-                        "& .MuiTabs-indicator":{
-                            backgroundColor: purple[300]
-                        },
-                    }}
-                >
-                    {
-                        sectionObj.category.map((itemObj, index)=>(
-                            <Tab key={`tab-${index}`} value={itemObj.cat} label={itemObj.cat} 
-                            sx={{
-                                fontSize: '1.1rem',
-                                color: grey[500],
-                                "&.Mui-selected":{
-                                    color: purple[200]
-                                },
-                                "&:hover":{
-                                    color: grey[200]
-                                },
-                                marginLeft: '0px',
-                                marginRight: '1.2rem'
-                            }}/>
-                        ))
-                    }
+            <Box sx={{
+                width : '100%',
+            }}>
+                <div style={{
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                }}>
+                    <Tabs
+                        value={category}
+                        onChange={handleTabChange}
+                        aria-label = "category tabs"
+                        sx={{
+                            "& .MuiTabs-indicator":{
+                                backgroundColor: purple[300]
+                            },
+                        }}
+                    >
+                        {
+                            sectionObj.category.map((itemObj, index)=>(
+                                
+                                <Tab key={`tab-${index}`} value={itemObj.cat} label={itemObj.cat} 
+                                sx={{
+                                    fontSize: '1.1rem',
+                                    color: grey[500],
+                                    "&.Mui-selected":{
+                                        color: purple[200],
+                                        marginRight: {
+                                            xs: '0.5rem',
+                                            md: '1.5rem'
+                                        }
+                                    },
+                                    "&:hover":{
+                                        color: grey[200]
+                                    },
+                                    marginLeft: '0px',
+                                }}/>
+                            ))
+                        }
 
-                </Tabs>
+                    </Tabs>
+                </div>
 
                 <GridCards id={id} sectionObj={sectionObj} />
 

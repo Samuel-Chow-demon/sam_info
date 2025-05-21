@@ -50,7 +50,7 @@ const DisplayAllBadge = () => {
                         gl={{ preserveDrawingBuffer: false }}
                         orthographic
                         camera={{
-                            zoom: 5,
+                            zoom: 4.5,
                             position: [0, 0, 20],
                             fov: 75,
                             near: 1,

@@ -18,7 +18,7 @@ const showMoreKey = {
 }
 
 
-const ContentContainer = ({contentComponent, title, showMoreObjRef={}}) => {
+const ContentContainer = ({contentComponent, title, showMoreObjRef={}, style={}}) => {
 
   const [showMoreOption, setShowMoreOption] = useState(showMoreKey.NA);
 
@@ -80,9 +80,11 @@ const ContentContainer = ({contentComponent, title, showMoreObjRef={}}) => {
 
   return (
     <Card variant="outlined" sx={{
+      width: '100%',
       backgroundColor: PARAGRAPH_BKGRD_COLOR,
       borderRadius: '10px',
       padding: '10px',
+      ...style
     }}>
 
       <CardHeader
