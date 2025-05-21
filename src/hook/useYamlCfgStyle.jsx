@@ -4,7 +4,7 @@ import {PARAGRAPH_STYLE,
         LIST_STYLE, LIST_ICON_STYLE, LIST_POINT_STYLE} from '../script/constant'
 import { Box, Typography, List, ListItem, ListItemIcon } from '@mui/material';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-import { memo } from 'react';
+import { memo, useState } from 'react';
 
 import IconComponent from '../components/IconComponent'
 import {defaultTextControl, 
@@ -32,6 +32,43 @@ const useYamlCfgStyle = () => {
                 </Typography>);
         } 
         return <></>; 
+    });
+
+    const ImgComponent = memo(({imgObj, defaultStyle={}})=>{
+
+        const [hovered, setHovered] = useState(false);
+
+        const handleHover = (flag)=>{
+            if (imgObj.hover)
+            {
+                setHovered(flag);
+            }
+        }
+
+        if (imgObj &&
+            'src' in imgObj)
+        {
+            const style = conditionalStyle(imgObj.style,
+                                            imgObj.style);
+
+            return(
+                <img 
+                    src={imgObj.src}
+                    onMouseEnter={() => handleHover(true)}
+                    onMouseLeave={() => handleHover(false)}
+                    style={{
+                        ...defaultStyle,
+                        ...style,
+                        transition: 'transform 0.3s ease, opacity 0.3s ease',
+                        transform: hovered ? 'scale(1.05)' : 'scale(1)',
+                        opacity: hovered ? 0.8 : 1,
+                        cursor: hovered ? 'pointer' : 'none'
+                    }}
+                >    
+                </img>
+            )
+        }
+        return null;
     });
 
     // 2 - List Component
@@ -224,6 +261,7 @@ const useYamlCfgStyle = () => {
 
     return {
         TextComponent,
+        ImgComponent,
         ListComponent,
         ContentComponent
 

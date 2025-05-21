@@ -14,6 +14,7 @@ import Education from './Education'
 import WorkExperience from './WorkExperience'
 import CertAndPublicate from './CertAndPublicate'
 import SkillAndLang from './SkillAndLang'
+import Portfolio from './Portfolio'
 
 export const Dashboard = () => {
 
@@ -43,6 +44,9 @@ export const Dashboard = () => {
 
       case 2:
         return <WorkExperience />
+      
+      case 3:
+        return <Portfolio />
 
       case 4:
         return <CertAndPublicate />
@@ -74,16 +78,18 @@ export const Dashboard = () => {
             minHeight: `max(100%, calc(100vh - ${GRID_PADDING_VALUE_PX * 2}px))`,
             boxSizing: 'border-box',
             margin: 0,
-            padding: 5,
+            padding: 3,
+            paddingTop: 4,
             borderRadius: 4,
             border: 1,
             borderColor: grey[800],
             backgroundColor: alpha(grey[900], 0.9),
-            gap: '50px'
+            gap: '2.5rem'
           }}>
 
           <Stepper nonLinear alternativeLabel  activeStep={activeCat} sx={{
             width: '100%',
+            marginTop: '1rem',
             '& .MuiStepConnector-line': {
               borderColor: grey[500],       // default line color
               borderTopWidth: 2,            // thickness of the line
@@ -121,6 +127,13 @@ export const Dashboard = () => {
               
           <Box sx={{
             minWidth : 850,
+            width: {
+              xs: '90%',
+              md: '80%'
+            },
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
           }}>
 
             <CategoryContent />
