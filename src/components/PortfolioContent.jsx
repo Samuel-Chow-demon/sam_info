@@ -4,10 +4,11 @@ import { PARAGRAPH_BKGRD_COLOR, PARAGRAPH_STYLE } from '../script/constant'
 import { conditionalStyle } from '../utility/style'
 import useYamlCfgStyle from '../hook/useYamlCfgStyle'
 import iconTexture from '../utility/iconTexture';
-import { blue, grey, purple } from '@mui/material/colors'
+import { amber, blue, deepPurple, grey, purple} from '@mui/material/colors'
 import IconComponent from './IconComponent'
 import ReplyIcon from '@mui/icons-material/Reply';
 import VideoPlayer from './VideoPlayer'
+import CastIcon from '@mui/icons-material/Cast';
 
 const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
 
@@ -16,6 +17,7 @@ const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
     const imageStyle = conditionalStyle(imageObj.style, imageObj.style);
 
     const [linkHovered, setLinkHovered] = useState(false);
+    const [deployLinkHovered, setDeployLinkHovered] = useState(false);
 
     const {
         TextComponent,
@@ -59,6 +61,18 @@ const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
         );
     });
 
+     const ChipMUIComponent = memo(({label, iconMUI : IconMUI, chipStyle, iconStyle})=>{
+        return(
+            <Chip
+                label={label}
+                avatar={
+                        <IconMUI style={iconStyle}/>
+                    }
+                sx={chipStyle}
+            />
+        );
+    });
+
     const LangAndIDEComponent = memo(({compObj, chipStyle})=>{
 
         return (
@@ -84,7 +98,7 @@ const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ 
-                                color: linkHovered ? blue[900] : purple[800], 
+                                color: linkHovered ? blue[900] : deepPurple[900], 
                                 textDecoration: 'underline',
                                 whiteSpace: 'normal',
                                 wordBreak: 'break-word',
@@ -100,6 +114,40 @@ const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
                     iconTag={'github'}
                     chipStyle={{...chipStyle,
                         paddingY: '2rem'
+                    }}
+                    /> : null
+                }
+                {
+                    "deploy" in compObj ?
+                    <ChipMUIComponent 
+                    label={
+                        <a 
+                            href={compObj.deploy.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ 
+                                color: deployLinkHovered ? blue[900] : amber[500], 
+                                textDecoration: 'underline',
+                                whiteSpace: 'normal',
+                                wordBreak: 'break-word',
+                                overflowWrap: 'anywhere',
+                            }}
+                            onClick={(e) => e.stopPropagation()}
+                            onMouseEnter={()=>setDeployLinkHovered(true)}
+                            onMouseLeave={()=>setDeployLinkHovered(false)}
+                        >
+                            {compObj.deploy.text}
+                        </a>
+                    }
+                    iconMUI={CastIcon}
+                    chipStyle={{...chipStyle,
+                        paddingY: '2rem',
+                    }}
+                    iconStyle={{
+                        width: '2rem',
+                        height: '2rem',
+                        color: 'white',
+                        marginRight: '0.1rem'
                     }}
                     /> : null
                 }
@@ -153,8 +201,13 @@ const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
                             {
                                 compObj.images.imgList.map((imgObj, idx)=>(
 
-                                    <Grid key={`${id}-Images-${index}-${idx}`} 
-                                        size={{xs:2, sm:2, md:3}}
+                                    <Grid 
+                                        item
+                                        key={`${id}-Images-${index}-${idx}`} 
+                                        // size={{xs:2, sm:2, md:3}}
+                                        xs={2} // Take up 2 columns in xs breakpoint
+                                        sm={2} // Take up 2 columns in sm breakpoint
+                                        md={3} // Take up 3 columns in md breakpoint
                                     >
                                         <GridImgCard imgObj={imgObj}/>
 
