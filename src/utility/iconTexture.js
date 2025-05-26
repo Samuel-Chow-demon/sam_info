@@ -82,7 +82,7 @@ const iconTexture = {
     "cityu" : cityu,
 
     "asmpt50" : asmpt50,
-    "asm" : asm
+    "asm" : asm,
 }
 
 export default iconTexture;

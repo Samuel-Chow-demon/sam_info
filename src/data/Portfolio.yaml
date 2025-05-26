@@ -22,6 +22,30 @@ projNapp:
         style:
           borderRadius: '0.5rem'
 
+  - pna:
+      name: "SpaceInvader"
+      category: "Games"
+      lang: 
+        icon: "C++"
+      ide: 
+        icon: "visualStudio"
+      img:
+        src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP1205-SpaceInvader/main/images/SpaceInvader.webp"
+        style:
+          borderRadius: '0.5rem'
+
+  - pna:
+      name: "ExpenseApp"
+      category: "Web Application"
+      lang: 
+        icon: "javascript"
+      ide: 
+        icon: "vscode"
+      img:
+        src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST1206_Final_ExpenseApp/main/Images/front_page_background.webp"
+        style:
+          borderRadius: '0.5rem'
+
 page:
   MazeRunner:
     title: 
@@ -36,13 +60,12 @@ page:
     github: 
       link: "https://github.com/Samuel-Chow-demon/CST1303_MazeRunner"
       text: "GitHub & ReadME"
-    deploy: ""
     img:
         src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST1303_MazeRunner/main/pic/MazeRunner.webp"
         style:
           width: '5rem'
           height: '5rem'
-          borderRadius: '3rem'
+          borderRadius: '1.5rem'
     
     description:
       style:
@@ -96,3 +119,171 @@ page:
             color: '#bdae77'
       link: "https://player.vimeo.com/video/1084814578?badge=0&autopause=0&player_id=0&portrait=0&byline=0&share=0&app_id=58479"
 
+  SpaceInvader:
+    title: 
+      text: "Terminal Console SpaceInvader"
+      style:
+        fontSize: "2rem"
+        color: "#c9bfa9"
+    lang: 
+      icon: "C++"
+    ide: 
+      icon: "visualStudio"
+    github: 
+      link: "https://github.com/Samuel-Chow-demon/CSTP1205-SpaceInvader"
+      text: "GitHub & ReadME"
+    img:
+        src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP1205-SpaceInvader/main/images/SpaceInvader.webp"
+        style:
+          width: '5rem'
+          height: '5rem'
+          borderRadius: '1.5rem'
+    
+    description:
+      style:
+        mb: '2rem'
+      list:
+        subheader:
+          text: "Project Description"
+          style:
+              fontSize: '22px'
+              mb: '0.5em'
+              color: '#bdae77'
+        points:
+        - point: "This project is a C++ terminal console space invader game that introduces simple character-to-pixel rendering method"
+        - point: "Player control a spaceship with arrow keys (UP, DOWN, LEFT, RIGHT) for the movement, and the 'S' key to fire missile."
+        - point: "The project demonstrates object orientation implementation of enemies, spaceship and missiles, as well as the game object polymorphism, hierachy and looping controls with sampling response"
+
+    images:
+      subheader:
+        text: "Images"
+        style:
+            width: '100%'
+            fontSize: '22px'
+            mt: '1rem'
+            mb: '0.1em'
+            color: '#bdae77'
+      imgList:
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP1205-SpaceInvader/main/images/fire.webp"
+            hover: true
+            style:
+              width: '15rem'
+              height: '15rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP1205-SpaceInvader/main/images/kill_enemy.webp"
+            hover: true
+            style:
+              width: '15rem'
+              height: '15rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP1205-SpaceInvader/main/images/win.webp"
+            hover: true
+            style:
+              width: '15rem'
+              height: '15rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP1205-SpaceInvader/main/images/lose.webp"
+            hover: true
+            style:
+              width: '15rem'
+              height: '15rem'
+              borderRadius: '0.5rem'
+    
+    video:
+      subheader:
+        text: "Demo"
+        style:
+            width: '100%'
+            fontSize: '22px'
+            mt: '1rem'
+            mb: '0.1em'
+            color: '#bdae77'
+      link: "https://player.vimeo.com/video/1086570233?h=fc2e0e054e&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+
+  ExpenseApp:
+    title: 
+      text: "Expense Tracker Application"
+      style:
+        fontSize: "2rem"
+        color: "#c9bfa9"
+    lang: 
+      icon: "javascript"
+    ide: 
+      icon: "vscode"
+    github: 
+      link: "https://github.com/Samuel-Chow-demon/CST1206_Final_ExpenseApp/tree/main"
+      text: "GitHub & ReadME"
+    deploy:
+      link: "https://cst1206-final-expenseapp.onrender.com/"
+      text: "Deployed link"
+    img:
+        src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST1206_Final_ExpenseApp/main/Images/front_page_background.webp"
+        style:
+          width: '5rem'
+          height: '5rem'
+          borderRadius: '1.5rem'
+
+    description:
+      style:
+        mb: '2rem'
+      list:
+        subheader:
+          text: "Project Description"
+          style:
+              fontSize: '22px'
+              mb: '0.5em'
+              color: '#bdae77'
+        points:
+        - point: "This project is a simple expense tracker that allows users to store their expense records with a detailed tracking history"
+        - point: "Application provides account creation functionality to securely store each user’s expense data"
+        - point: "Each expense record can be assigned to a custom category, with matching icons from a pre-installed icon pool"
+        - point: "Application also supports an expense summary grouped by category, and visualizes the data in a year-month chart for easy tracking and analysis"
+
+    images:
+      subheader:
+        text: "Images"
+        style:
+            width: '100%'
+            fontSize: '22px'
+            mt: '1rem'
+            mb: '0.1em'
+            color: '#bdae77'
+      imgList:
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST1206_Final_ExpenseApp/main/Images/1-Landing.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST1206_Final_ExpenseApp/main/Images/3-Dashboard.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST1206_Final_ExpenseApp/main/Images/4-AddExpense.webp"
+            hover: true
+            style:
+              width: '30rem'
+              height: '25rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST1206_Final_ExpenseApp/main/Images/4-Icon.webp"
+            hover: true
+            style:
+              width: '30rem'
+              height: '15rem'
+              borderRadius: '0.5rem'
