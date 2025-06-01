@@ -86,6 +86,10 @@ const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
                 }}>
                 <ChipComponent label={"Language"} iconTag={compObj.lang.icon} chipStyle={chipStyle}/>
                 {
+                    "lib" in compObj ?
+                    <ChipComponent label={"Library"} iconTag={compObj.lib.icon} chipStyle={chipStyle}/> : null
+                }
+                {
                     "ide" in compObj ?
                     <ChipComponent label={"IDE"} iconTag={compObj.ide.icon} chipStyle={chipStyle}/> : null
                 }

@@ -85,12 +85,13 @@ const Portfolio = () => {
         const imgObj = "img" in compObj ? compObj.img : null;
         const langObj = "lang" in compObj ? compObj.lang : null;
         const ideObj = "ide" in compObj ? compObj.ide : null;
+        const libObj = "lib" in compObj ? compObj.lib : null;
 
         const cardMediaStyle = conditionalStyle(imgObj.style, imgObj.style);
 
         const [iconPos, setIconPos] = useState({
             top: 0,
-            left: 0
+            right: 0
         });
 
         const iconStyle = {
@@ -112,14 +113,12 @@ const Portfolio = () => {
 
                 const top = cardMediaRef.current.offsetTop - 
                                 iconStackRef.current.offsetHeight / 2;
-                const left = cardMediaRef.current.offsetWidth * 0.55;
+                const right = (iconStackScale.current) * 9;
 
                 setIconPos({
                     top,
-                    left 
+                    right 
                 });
-
-                iconStackScale.current = (cardMediaRef.current.offsetWidth / iconStackRef.current.offsetHeight) * 0.16;
             }
         }, [cardMediaRef.current, iconStackRef.current]);
 
@@ -166,21 +165,28 @@ const Portfolio = () => {
                     />
 
                     {
-                        (langObj || ideObj) ?
+                        (langObj || ideObj || libObj) ?
                         <Stack
                             ref={iconStackRef} 
-                            direction={'row'} 
+                            direction={'row'}
+                            padding={0}
+                            margin={0} 
                             spacing={2} 
                             sx={{
                             position: 'absolute',
                             top: iconPos.top,
-                            left: iconPos.left,
+                            right: iconPos.right,
                             scale: iconStackScale.current
                         }}>
                             
                             {
                                 (langObj) ?
                                 <IconComponent iconTag={langObj.icon} style={iconStyle}/> : null
+                            }
+
+                            {
+                                (libObj) ?
+                                <IconComponent iconTag={libObj.icon} style={iconStyle}/> : null
                             }
 
                             {
