@@ -46,6 +46,20 @@ projNapp:
         style:
           borderRadius: '0.5rem'
 
+  - pna:
+      name: "SimpleWork"
+      category: "Web Application"
+      lang: 
+        icon: "javascript"
+      lib:
+        icon: "react"
+      ide: 
+        icon: "vscode"
+      img:
+        src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST2107_AppProject/main/images/Simple%20Work.webp"
+        style:
+          borderRadius: '0.5rem'
+
 page:
   MazeRunner:
     title: 
@@ -287,3 +301,122 @@ page:
               width: '30rem'
               height: '15rem'
               borderRadius: '0.5rem'
+
+  SimpleWork:
+    title: 
+      text: "Work Management Web Application"
+      style:
+        fontSize: "2rem"
+        color: "#c9bfa9"
+    lang: 
+      icon: "javascript"
+    lib:
+      icon: "react"
+    ide: 
+      icon: "vscode"
+    github: 
+      link: "https://github.com/Samuel-Chow-demon/CST2107_AppProject"
+      text: "GitHub & ReadME"
+    deploy:
+      link: "https://worksimple.netlify.app/"
+      text: "Deployed link"
+    img:
+        src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST2107_AppProject/main/images/Simple%20Work.webp"
+        style:
+          width: '5rem'
+          height: '5rem'
+          borderRadius: '1.5rem'
+
+    description:
+      style:
+        mb: '2rem'
+      list:
+        subheader:
+          text: "Project Description"
+          style:
+              fontSize: '22px'
+              mb: '0.5em'
+              color: '#bdae77'
+        points:
+        - point: "This project is a simplified Trello-style team management web application allows teams to create workspaces for work distributons"
+        - point: "Application provides account creation functionality to securely store each team and user data"
+        - point: "Each user can create teams, projects, states and tasks for work dynamics"
+        - point: "Each user can add other member to team, add member to project and arrange members to different tasks"
+        - point: "Handy drag-and-drop feature enables seamless rearrangement of tasks between states and prioritization of states within a project"
+
+    images:
+      subheader:
+        text: "Images"
+        style:
+            width: '100%'
+            fontSize: '22px'
+            mt: '1rem'
+            mb: '0.1em'
+            color: '#bdae77'
+      imgList:
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST2107_AppProject/main/images/landing.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST2107_AppProject/main/images/signin.webp"
+            hover: true
+            style:
+              width: '18rem'
+              height: '22rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST2107_AppProject/main/images/guest_login.webp"
+            hover: true
+            style:
+              width: '16rem'
+              height: '25rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST2107_AppProject/main/images/createWS.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST2107_AppProject/main/images/createProject.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST2107_AppProject/main/images/addState.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST2107_AppProject/main/images/dragTask.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+    video:
+      subheader:
+        text: "Demo"
+        style:
+            width: '100%'
+            fontSize: '22px'
+            mt: '1rem'
+            mb: '0.1em'
+            color: '#bdae77'
+      link: "https://player.vimeo.com/video/1089436376?h=8a7b8d223d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
