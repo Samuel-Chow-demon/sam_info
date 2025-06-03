@@ -128,6 +128,7 @@ const Portfolio = () => {
                     sx={{
                         position: 'relative',
                         maxWidth: `${width}px`,
+                        height: `auto`,
                         backgroundColor: purple[100],
                         borderRadius: '2rem',
                         transition: 'transform 0.3s ease-in-out',

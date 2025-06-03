@@ -60,6 +60,20 @@ projNapp:
         style:
           borderRadius: '0.5rem'
 
+  - pna:
+      name: "Maritime Shipping Data Prediction"
+      category: "AI"
+      lang: 
+        icon: "python"
+      lib:
+        icon: "scikit"
+      ide: 
+        icon: "jupyter"
+      img:
+        src: "https://raw.githubusercontent.com/Samuel-Chow-demon/MaritimeShippingDataPrediction/main/images/MaritimeDataPredict.webp"
+        style:
+          borderRadius: '0.5rem'
+
 page:
   MazeRunner:
     title: 
@@ -334,9 +348,9 @@ page:
         subheader:
           text: "Project Description"
           style:
-              fontSize: '22px'
-              mb: '0.5em'
-              color: '#bdae77'
+            fontSize: '22px'
+            mb: '0.5em'
+            color: '#bdae77'
         points:
         - point: "This project is a simplified Trello-style team management web application allows teams to create workspaces for work distributons"
         - point: "Application provides account creation functionality to securely store each team and user data"
@@ -414,9 +428,156 @@ page:
       subheader:
         text: "Demo"
         style:
+          width: '100%'
+          fontSize: '22px'
+          mt: '1rem'
+          mb: '0.1em'
+          color: '#bdae77'
+      link: "https://player.vimeo.com/video/1089436376?h=8a7b8d223d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+
+  Maritime Shipping Data Prediction:
+    title: 
+      text: "Maritime Shipping Data Prediction"
+      style:
+        fontSize: "2rem"
+        color: "#c9bfa9"
+    lang: 
+      icon: "python"
+    lib:
+      icon: "scikit"
+    ide: 
+      icon: "jupyter"
+    github: 
+      link: "https://github.com/Samuel-Chow-demon/MaritimeShippingDataPrediction"
+      text: "GitHub & ReadME"
+    img:
+        src: "https://raw.githubusercontent.com/Samuel-Chow-demon/MaritimeShippingDataPrediction/main/images/MaritimeDataPredict.webp"
+        style:
+          width: '5rem'
+          height: '5rem'
+          borderRadius: '1.5rem'
+
+    description:
+      style:
+        mb: '2rem'
+      list:
+        subheader:
+          text: "Project Description"
+          style:
+            fontSize: '22px'
+            mb: '0.5em'
+            color: '#bdae77'
+        points:
+        - point: "This project is a timeseries data prediction project through using supervised regression learning model from sci-kit learn library"
+        - point: "Three real industrial data with artificial bias included are investigated"
+        - point: "Each dataset would have a column feature as the prediction target"
+        - point: "Each data records different numerical values of multiple feature column with numerical naming"
+        - point: "All the data is record at the 1st day of every month from year 2000 to year 2023"
+
+    chipcontent:
+      link: "https://docs.google.com/presentation/d/1vzLvmQ1f9gzsvuk5h-RmJjLIdovTewvH/edit?usp=drive_link&ouid=107050956325506656132&rtpof=true&sd=true"
+      text: "Detailed Project Report Here"
+      style:
+        width: '75%'
+
+    images:
+      subheader:
+        text: "Images"
+        style:
             width: '100%'
             fontSize: '22px'
             mt: '1rem'
             mb: '0.1em'
             color: '#bdae77'
-      link: "https://player.vimeo.com/video/1089436376?h=8a7b8d223d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      imgList:
+        - img:
+            subheader:
+              text: "Feature Selection Test"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/MaritimeShippingDataPrediction/main/images/featureSelection.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            subheader:
+              text: "Best for dataset 549305"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/MaritimeShippingDataPrediction/main/images/result_549305.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/MaritimeShippingDataPrediction/main/images/result_chart_549305.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            subheader:
+              text: "Best for dataset 534541"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/MaritimeShippingDataPrediction/main/images/result_534541.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/MaritimeShippingDataPrediction/main/images/result_chart_534541.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            subheader:
+              text: "Best for dataset 534546"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/MaritimeShippingDataPrediction/main/images/result_534546.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/MaritimeShippingDataPrediction/main/images/result_chart_534546.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+
+    
+
