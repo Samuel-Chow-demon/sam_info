@@ -29,6 +29,7 @@ import threejs from '../assets/package/threejs.webp';
 import mui from '../assets/package/materialui.webp';
 import opencv from '../assets/package/opencv.webp';
 import ultralytics from '../assets/package/ultralytics.webp';
+import scikitlearn from '../assets/package/scikit-learn.webp';
 
 // tool
 import git from '../assets/tool/git.webp';
@@ -72,6 +73,7 @@ const iconTexture = {
     "mui" : mui,
     "opencv" : opencv,
     "ultralytics" : ultralytics,
+    "scikit" : scikitlearn,
 
     "git" : git,
     "github" : github,

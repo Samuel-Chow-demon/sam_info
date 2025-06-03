@@ -3,12 +3,12 @@ import {memo, useEffect, useState} from 'react'
 import { PARAGRAPH_BKGRD_COLOR, PARAGRAPH_STYLE } from '../script/constant'
 import { conditionalStyle } from '../utility/style'
 import useYamlCfgStyle from '../hook/useYamlCfgStyle'
-import iconTexture from '../utility/iconTexture';
 import { amber, blue, deepPurple, grey, purple} from '@mui/material/colors'
 import IconComponent from './IconComponent'
 import ReplyIcon from '@mui/icons-material/Reply';
 import VideoPlayer from './VideoPlayer'
 import CastIcon from '@mui/icons-material/Cast';
+import DescriptionIcon from '@mui/icons-material/Description';
 
 const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
 
@@ -159,6 +159,67 @@ const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
         );
     });
 
+    const ChipContentComponent = memo(({compObj, chipStyle})=>{
+
+        const chipContentStyle = conditionalStyle(compObj?.chipcontent?.style, compObj?.chipcontent?.style);
+
+        const LabelComponent = ()=>{
+
+            return(
+                <>
+                    {
+                        compObj.chipcontent.link ?
+                        <a 
+                            href={compObj.chipcontent.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ 
+                                color: deployLinkHovered ? blue[900] : amber[500], 
+                                textDecoration: 'underline',
+                                whiteSpace: 'normal',
+                                wordBreak: 'break-word',
+                                overflowWrap: 'anywhere',
+                            }}
+                            onClick={(e) => e.stopPropagation()}
+                            onMouseEnter={()=>setDeployLinkHovered(true)}
+                            onMouseLeave={()=>setDeployLinkHovered(false)}
+                        >
+                            {compObj.chipcontent.text}
+                        </a>
+                        :
+                        (compObj.chipcontent.text)
+                    }
+                </>
+            )
+        };
+
+        return(
+            <>
+                {
+                    "chipcontent" in compObj ?
+                    <ChipMUIComponent 
+                    label={
+                        <LabelComponent />
+                    }
+                    iconMUI={DescriptionIcon}
+                    chipStyle={{...chipStyle,
+                        paddingY: '2rem',
+                        ...chipContentStyle
+                    }}
+                    iconStyle={{
+                        width: '2rem',
+                        height: '2rem',
+                        color: 'white',
+                        marginRight: '0.1rem'
+                    }}/>
+                    : null
+                }
+            </>
+        );
+
+    });
+
+
     const handleGotoFile = ({linkObj})=>{
 
         if ("src" in linkObj)
@@ -169,13 +230,21 @@ const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
 
     const GridImgCard = memo(({id, imgObj, index})=>{
 
+         const HeaderComponent = <TextComponent id={id} paragObj={imgObj.img} refKey={'subheader'} index={index} defaultStyle={PARAGRAPH_STYLE}/>;
+
         return(
             <Tooltip title="click to document URL / reference">
                 <div style={{
                         width: '100%',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'flex-start',
+                        alignItems: 'flex-start',
+                        gap: '0.5rem'
                     }}
                     onClick={()=>handleGotoFile({linkObj: imgObj.img})}
                 >
+                    {HeaderComponent}
                     <ImgComponent imgObj={imgObj.img} />
                     
                 </div>
@@ -314,6 +383,8 @@ const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
 
 
                 <ListComponent id={id} paragObj={compObj.description} index={index} />
+
+                <ChipContentComponent compObj={compObj} chipStyle={chipStyle}/>
                 
                 <GridImages id={id} compObj={compObj} index={index} />
 

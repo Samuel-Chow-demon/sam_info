@@ -104,6 +104,7 @@ content:
                 mb: '0.5em'
                 color: '#bdae77'
           points:
+          - point: "Manufacturing robots application software"
           - point: "MCU Programming with device to machine robots"
           - point: "Robotic Automations, Motor Motion Control Knowledge"
           - point: "LED Optical Inspection (AOI) and Sorting"
