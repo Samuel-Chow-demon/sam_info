@@ -2,7 +2,6 @@ title: Portfolio
 category:
   - cat: "AI"
   - cat: "Robocon"
-  - cat: "Work Exp"
   - cat: "Client & Server"
   - cat: "Web Application"
   - cat: "Games"
@@ -74,6 +73,39 @@ projNapp:
         style:
           borderRadius: '0.5rem'
 
+  - pna:
+      name: "JustPark"
+      category: "AI"
+      icon:
+        style:
+          right: '-30px'
+          scale: '0.72'
+      lang: 
+        icon: "javascript"
+      lang2: 
+        icon: "python"
+      lib:
+        icon: "react"
+      lib2:
+        icon: "ultralytics"
+      ide: 
+        icon: "vscode"
+      img:
+        src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP-2204-IT-Project/main/images/JustPark.webp"
+        style:
+          borderRadius: '0.5rem'
+
+  - pna:
+      name: "DishitOut"
+      category: "UI/UX"
+      ide: 
+        icon: "figma"
+      img:
+        src: "https://raw.githubusercontent.com/Samuel-Chow-demon/DishitOut/main/images/dishitout.webp"
+        style:
+          borderRadius: '0.5rem'
+          maxHeight: '300px'
+
 page:
   MazeRunner:
     title: 
@@ -91,8 +123,8 @@ page:
     img:
         src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST1303_MazeRunner/main/pic/MazeRunner.webp"
         style:
-          width: '5rem'
-          height: '5rem'
+          width: '100%'
+          height: 'auto'
           borderRadius: '1.5rem'
     
     description:
@@ -163,8 +195,8 @@ page:
     img:
         src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP1205-SpaceInvader/main/images/SpaceInvader.webp"
         style:
-          width: '5rem'
-          height: '5rem'
+          width: '100%'
+          height: 'auto'
           borderRadius: '1.5rem'
     
     description:
@@ -248,14 +280,11 @@ page:
     github: 
       link: "https://github.com/Samuel-Chow-demon/CST1206_Final_ExpenseApp/tree/main"
       text: "GitHub & ReadME"
-    deploy:
-      link: "https://cst1206-final-expenseapp.onrender.com/"
-      text: "Deployed link"
     img:
         src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST1206_Final_ExpenseApp/main/Images/front_page_background.webp"
         style:
-          width: '5rem'
-          height: '5rem'
+          width: '100%'
+          height: 'auto'
           borderRadius: '1.5rem'
 
     description:
@@ -273,6 +302,13 @@ page:
         - point: "Application provides account creation functionality to securely store each user’s expense data"
         - point: "Each expense record can be assigned to a custom category, with matching icons from a pre-installed icon pool"
         - point: "Application also supports an expense summary grouped by category, and visualizes the data in a year-month chart for easy tracking and analysis"
+
+    chipcontent:
+      isdeploy: true
+      link: "https://cst1206-final-expenseapp.onrender.com/"
+      text: "Deployed App Link"
+      style:
+        width: '75%'
 
     images:
       subheader:
@@ -331,14 +367,11 @@ page:
     github: 
       link: "https://github.com/Samuel-Chow-demon/CST2107_AppProject"
       text: "GitHub & ReadME"
-    deploy:
-      link: "https://worksimple.netlify.app/"
-      text: "Deployed link"
     img:
         src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CST2107_AppProject/main/images/Simple%20Work.webp"
         style:
-          width: '5rem'
-          height: '5rem'
+          width: '100%'
+          height: 'auto'
           borderRadius: '1.5rem'
 
     description:
@@ -357,6 +390,13 @@ page:
         - point: "Each user can create teams, projects, states and tasks for work dynamics"
         - point: "Each user can add other member to team, add member to project and arrange members to different tasks"
         - point: "Handy drag-and-drop feature enables seamless rearrangement of tasks between states and prioritization of states within a project"
+
+    chipcontent:
+      isdeploy: true
+      link: "https://worksimple.netlify.app/"
+      text: "Deployed App Link"
+      style:
+        width: '75%'
 
     images:
       subheader:
@@ -453,8 +493,10 @@ page:
     img:
         src: "https://raw.githubusercontent.com/Samuel-Chow-demon/MaritimeShippingDataPrediction/main/images/MaritimeDataPredict.webp"
         style:
-          width: '5rem'
-          height: '5rem'
+          width: '115%'
+          height: 'auto'
+          objectFit: 'cover'
+          transform: 'translateX(-5%)'
           borderRadius: '1.5rem'
 
     description:
@@ -578,6 +620,337 @@ page:
               height: '18rem'
               borderRadius: '0.5rem'
 
+  JustPark:
+    title: 
+      text: "A real-time car parking slot detection web application"
+      style:
+        fontSize: "2rem"
+        color: "#c9bfa9"
+    lang: 
+      icon: "javascript"
+    lang2: 
+      icon: "python"
+    lib:
+      icon: "react"
+    lib2:
+      icon: "ultralytics"
+    ide: 
+      icon: "vscode"
+    github: 
+      link: "https://github.com/Samuel-Chow-demon/CSTP-2204-IT-Project"
+      text: "GitHub & ReadME"
+    img:
+      src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP-2204-IT-Project/main/images/JustPark.webp"
+      style:
+        width: '100%'
+        height: 'auto'
+        borderRadius: '1.5rem'
+
+    description:
+      style:
+        mb: '2rem'
+      list:
+        subheader:
+          text: "Project Description"
+          style:
+            fontSize: '22px'
+            mb: '0.5em'
+            color: '#bdae77'
+        points:
+        - point: "This project is a web application for real-time parking slot detection. It includes two frontends and one backend"
+        - point: "Two frontends serve for public users and parking site property owners, while the backend handles the request from two frontends on providing real-time site video streaming"
+        - point: "The backend would apply YOLO trained model from predefined parking image dataset to identify parking slot vacancy and occupied condition"
+        - point: "The vacancy and occupied counts will be displayed in the application user interface in both frontends"
+        - point: "Mobile user can make use the information for friendly parking while property owner can utilize it for better management"
+
+    images:
+      subheader:
+        text: "Images"
+        style:
+            width: '100%'
+            fontSize: '22px'
+            mt: '1rem'
+            mb: '0.1em'
+            color: '#bdae77'
+      imgList:
+        - img:
+            subheader:
+              text: "Log In & SignUp"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP-2204-IT-Project/main/images/login.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP-2204-IT-Project/main/images/signup.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            subheader:
+              text: "Dashboard"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP-2204-IT-Project/main/images/dashboard.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            subheader:
+              text: "Stream table"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP-2204-IT-Project/main/images/stream.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '15rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            subheader:
+              text: "Location table"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP-2204-IT-Project/main/images/location.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '12rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            subheader:
+              text: "Detection Example"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP-2204-IT-Project/main/images/detection1.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP-2204-IT-Project/main/images/detection2.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+          
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP-2204-IT-Project/main/images/detection3.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '18rem'
+              borderRadius: '0.5rem'
+    
+    video:
+      subheader:
+        text: "Demo"
+        style:
+          width: '100%'
+          fontSize: '22px'
+          mt: '1rem'
+          mb: '0.1em'
+          color: '#bdae77'
+      link: "https://player.vimeo.com/video/1090629802?h=288c8476ff&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+
+  DishitOut:
+    title: 
+      text: "A cooking recipe application prototype"
+      style:
+        fontSize: "2rem"
+        color: "#c9bfa9"
+    ide: 
+      icon: "figma"
+    github: 
+      link: "https://github.com/Samuel-Chow-demon/DishitOut"
+      text: "GitHub & ReadME"
+    img:
+      src: "https://raw.githubusercontent.com/Samuel-Chow-demon/DishitOut/main/images/dishitout.webp"
+      style:
+        width: '100%'
+        height: 'auto'
+        borderRadius: '1.5rem'
+
+    description:
+      style:
+        mb: '2rem'
+      list:
+        subheader:
+          text: "Project Description"
+          style:
+            fontSize: '22px'
+            mb: '0.5em'
+            color: '#bdae77'
+        points:
+        - point: "This project is a mobile application prototype designed for learning and sharing cooking recipes"
+        - point: "The app would have two kinds of account, explorer and creator"
+        - point: "Explorer allows to search and explore the food recipe which created by food content creators. While the food content creators are able to be subscribed on gaining revenue from subscribers"
+        - point: "The project includes all necessary functionality and pages likes signup, login, payment, dashboard, recipe view / creation page, messaging, comments etc."
+        - point: "At the same time considering the design of user experience and interface importance"
+
+    chipcontent:
+      isdeploy: true
+      link: "https://www.figma.com/proto/fegnsXwNAZFwTAnxbBGhV8/DishitOut-App?node-id=1249-5821&p=f&t=QnyZtFIhl3VkUeJz-1&scaling=scale-down&content-scaling=fixed&page-id=1%3A35&starting-point-node-id=1249%3A5821&show-proto-sidebar=1"
+      text: "Deployed Prototype Here"
+      style:
+        width: '75%'
+
+    images:
+      subheader:
+        text: "Example Images"
+        style:
+            width: '100%'
+            fontSize: '22px'
+            mt: '1rem'
+            mb: '0.1em'
+            color: '#bdae77'
+      imgList:
+        - img:
+            subheader:
+              text: "Wireframe Landing Page"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/DishitOut/main/images/Wireframe1.webp"
+            hover: true
+            style:
+              width: '16rem'
+              height: '30rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            subheader:
+              text: "Wireframe Account Creation"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/DishitOut/main/images/Wireframe2.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '25rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            subheader:
+              text: "Wireframe Dashboard"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/DishitOut/main/images/Wireframe3.webp"
+            hover: true
+            style:
+              width: '30rem'
+              height: '25rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            subheader:
+              text: "Prototype Landing & LogIn"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/DishitOut/main/images/prototype1.webp"
+            hover: true
+            style:
+              width: '25rem'
+              height: '28rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            subheader:
+              text: "Prototype Dashboard & Nav Wheel"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/DishitOut/main/images/prototype2.webp"
+            hover: true
+            style:
+              width: '25rem'
+              height: '28rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            subheader:
+              text: "Prototype Saved Recipe"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/DishitOut/main/images/prototype4.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '20rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            subheader:
+              text: "Prototype Explore Recipe"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/DishitOut/main/images/prototype5.webp"
+            hover: true
+            style:
+              width: '25rem'
+              height: '28rem'
+              borderRadius: '0.5rem'
 
     
 
