@@ -84,10 +84,21 @@ const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
                     alignItems: 'flex-start',
                     gap: '1.5rem'
                 }}>
-                <ChipComponent label={"Language"} iconTag={compObj.lang.icon} chipStyle={chipStyle}/>
+                {
+                    "lang" in compObj ?
+                    <ChipComponent label={"Language"} iconTag={compObj.lang.icon} chipStyle={chipStyle}/> : null
+                }
+                {
+                    "lang2" in compObj ?
+                    <ChipComponent label={"Language"} iconTag={compObj.lang2.icon} chipStyle={chipStyle}/> : null
+                }
                 {
                     "lib" in compObj ?
                     <ChipComponent label={"Library"} iconTag={compObj.lib.icon} chipStyle={chipStyle}/> : null
+                }
+                {
+                    "lib2" in compObj ?
+                    <ChipComponent label={"Library"} iconTag={compObj.lib2.icon} chipStyle={chipStyle}/> : null
                 }
                 {
                     "ide" in compObj ?
@@ -121,40 +132,6 @@ const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
                     }}
                     /> : null
                 }
-                {
-                    "deploy" in compObj ?
-                    <ChipMUIComponent 
-                    label={
-                        <a 
-                            href={compObj.deploy.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{ 
-                                color: deployLinkHovered ? blue[900] : amber[500], 
-                                textDecoration: 'underline',
-                                whiteSpace: 'normal',
-                                wordBreak: 'break-word',
-                                overflowWrap: 'anywhere',
-                            }}
-                            onClick={(e) => e.stopPropagation()}
-                            onMouseEnter={()=>setDeployLinkHovered(true)}
-                            onMouseLeave={()=>setDeployLinkHovered(false)}
-                        >
-                            {compObj.deploy.text}
-                        </a>
-                    }
-                    iconMUI={CastIcon}
-                    chipStyle={{...chipStyle,
-                        paddingY: '2rem',
-                    }}
-                    iconStyle={{
-                        width: '2rem',
-                        height: '2rem',
-                        color: 'white',
-                        marginRight: '0.1rem'
-                    }}
-                    /> : null
-                }
             </div>
         );
     });
@@ -162,6 +139,8 @@ const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
     const ChipContentComponent = memo(({compObj, chipStyle})=>{
 
         const chipContentStyle = conditionalStyle(compObj?.chipcontent?.style, compObj?.chipcontent?.style);
+
+        const ChipIcon = compObj?.chipcontent?.isdeploy ? CastIcon : DescriptionIcon;
 
         const LabelComponent = ()=>{
 
@@ -201,7 +180,7 @@ const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
                     label={
                         <LabelComponent />
                     }
-                    iconMUI={DescriptionIcon}
+                    iconMUI={ChipIcon}
                     chipStyle={{...chipStyle,
                         paddingY: '2rem',
                         ...chipContentStyle
@@ -389,6 +368,7 @@ const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
                 <GridImages id={id} compObj={compObj} index={index} />
 
                 <VideoComponent compObj={compObj} />
+
             </div>
 
         </div>
