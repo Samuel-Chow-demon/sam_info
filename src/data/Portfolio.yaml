@@ -106,6 +106,18 @@ projNapp:
           borderRadius: '0.5rem'
           maxHeight: '300px'
 
+  - pna:
+      name: "Overrun"
+      category: "Games"
+      lang: 
+        icon: "kotlin"
+      ide: 
+        icon: "androidStudio"
+      img:
+        src: "https://raw.githubusercontent.com/Travis975/Team-Null-CSTP2205-Android-Programming/main/images/overrun.webp"
+        style:
+          borderRadius: '0.5rem'
+
 page:
   MazeRunner:
     title: 
@@ -951,6 +963,188 @@ page:
               width: '25rem'
               height: '28rem'
               borderRadius: '0.5rem'
+
+  Overrun:
+    title: 
+      text: "A 2D Android survival game"
+      style:
+        fontSize: "2rem"
+        color: "#c9bfa9"
+    lang: 
+      icon: "kotlin"
+    ide: 
+      icon: "androidStudio"
+    github: 
+      link: "https://github.com/Travis975/Team-Null-CSTP2205-Android-Programming"
+      text: "GitHub & ReadME"
+    img:
+      src: "https://raw.githubusercontent.com/Travis975/Team-Null-CSTP2205-Android-Programming/main/images/overrun.webp"
+      style:
+        width: '100%'
+        height: 'auto'
+        borderRadius: '1.5rem'
+
+    description:
+      style:
+        mb: '2rem'
+      list:
+        subheader:
+          text: "Project Description"
+          style:
+            fontSize: '22px'
+            mb: '0.5em'
+            color: '#bdae77'
+        points:
+        - point: "This project is a 2D survival mobile game developed using Android Studio"
+        - point: "The app features a multi-screen user flow, beginning with a landing page where users can sign in or sign up. Authentication is handled via Firebase OAuth"
+        - point: "Authentication is handled via Firebase OAuth"
+        - point: "Leaderboard system is included and powered by Firebase Firestore, allowing for real-time scrore tracking and global comparison between players"
+        - point: "Gameplay has multiple levels, each with its own unique difficulty"
+        - point: "Player moves the character in a world map system"
+        - point: "Player only needs to use a thumb to control the character to move and attack by dragging and tapping"
+        - point: "Enemy would be created from random direction in a random of time intervals"
+        - point: "Player needs to keep alive and kill enemies to clear stages"
+
+    images:
+      subheader:
+        text: "Example Images"
+        style:
+            width: '100%'
+            fontSize: '22px'
+            mt: '1rem'
+            mb: '0.1em'
+            color: '#bdae77'
+      imgList:
+        - img:
+            src: "https://raw.githubusercontent.com/Travis975/Team-Null-CSTP2205-Android-Programming/main/images/overrun1.webp"
+            hover: true
+            style:
+              width: '14rem'
+              height: '28rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Travis975/Team-Null-CSTP2205-Android-Programming/main/images/overrun2.webp"
+            hover: true
+            style:
+              width: '14rem'
+              height: '28rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Travis975/Team-Null-CSTP2205-Android-Programming/main/images/overrun3.webp"
+            hover: true
+            style:
+              width: '14rem'
+              height: '28rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Travis975/Team-Null-CSTP2205-Android-Programming/main/images/overrun8.webp"
+            hover: true
+            style:
+              width: '14rem'
+              height: '28rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Travis975/Team-Null-CSTP2205-Android-Programming/main/images/overrun6.webp"
+            hover: true
+            style:
+              width: '14rem'
+              height: '28rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Travis975/Team-Null-CSTP2205-Android-Programming/main/images/overrun7.webp"
+            hover: true
+            style:
+              width: '14rem'
+              height: '28rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Travis975/Team-Null-CSTP2205-Android-Programming/main/images/hero_tokage.webp"
+            hover: true
+            style:
+              width: '10rem'
+              height: '20rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Travis975/Team-Null-CSTP2205-Android-Programming/main/images/parrot.webp"
+            hover: true
+            style:
+              width: '10rem'
+              height: '20rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Travis975/Team-Null-CSTP2205-Android-Programming/main/images/slime.webp"
+            hover: true
+            style:
+              width: '10rem'
+              height: '20rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Travis975/Team-Null-CSTP2205-Android-Programming/main/images/rock1_1.webp"
+            hover: true
+            style:
+              width: '5rem'
+              height: '5rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Travis975/Team-Null-CSTP2205-Android-Programming/main/images/rock2_1.webp"
+            hover: true
+            style:
+              width: '5rem'
+              height: '5rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Travis975/Team-Null-CSTP2205-Android-Programming/main/images/cactus_1.webp"
+            hover: true
+            style:
+              width: '5rem'
+              height: '5rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Travis975/Team-Null-CSTP2205-Android-Programming/main/images/meat_w_bone.webp"
+            hover: true
+            style:
+              width: '5rem'
+              height: '5rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Travis975/Team-Null-CSTP2205-Android-Programming/main/images/heart.webp"
+            hover: true
+            style:
+              width: '5rem'
+              height: '5rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            src: "https://raw.githubusercontent.com/Travis975/Team-Null-CSTP2205-Android-Programming/main/images/tree_1.webp"
+            hover: true
+            style:
+              width: '5rem'
+              height: '5rem'
+              borderRadius: '0.5rem'
+
+    video:
+      subheader:
+        text: "Demo"
+        style:
+          width: '100%'
+          fontSize: '22px'
+          mt: '1rem'
+          mb: '0.1em'
+          color: '#bdae77'
+      link: "https://player.vimeo.com/video/1091072147?h=c793e32e2d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
 
     
 
