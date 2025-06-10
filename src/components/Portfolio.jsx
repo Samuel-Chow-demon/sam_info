@@ -15,6 +15,8 @@ import PortfolioContent from './PortfolioContent';
 
 const allCategoryKey = "All";
 
+const rootDom = document.getElementById('root');
+
 const Portfolio = () => {
     
     const [section, setSection] = useState([]);
@@ -45,6 +47,10 @@ const Portfolio = () => {
 
     const handleGotoPortfolio = (projectName)=>{
         setSelectedProj(projectName)
+        rootDom.scrollTo({
+            top: 0,
+            behavior: 'instant'
+        });
     }
 
     const GridCards = memo(({id, sectionObj})=>{
