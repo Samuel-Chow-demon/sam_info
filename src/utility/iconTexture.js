@@ -19,7 +19,8 @@ import jupyter from '../assets/ide/jupyter.webp';
 import eclipse from '../assets/ide/eclipse.webp';
 import intellij from '../assets/ide/intellij-idea.webp';
 import figma from '../assets/ide/figma.webp';
-import androidStudio from '../assets/ide/android-studio.webp'
+import androidStudio from '../assets/ide/android-studio.webp';
+import aws from '../assets/ide/aws.webp';
 
 // package
 import html5 from '../assets/package/html5.webp';
@@ -66,6 +67,7 @@ const iconTexture = {
     "intellij" : intellij,
     "figma" : figma,
     "androidStudio" : androidStudio,
+    'aws' : aws,
 
     "html5" : html5,
     "css" : css,

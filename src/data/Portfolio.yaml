@@ -118,6 +118,29 @@ projNapp:
         style:
           borderRadius: '0.5rem'
 
+  - pna:
+      name: "ESeePark X AWS"
+      category: "AWS"
+      icon:
+        style:
+          right: '-30px'
+          scale: '0.72'
+      lang: 
+        icon: "javascript"
+      lang2: 
+        icon: "python"
+      lib:
+        icon: "react"
+      lib2:
+        icon: "ultralytics"
+      ide: 
+        icon: "aws"
+      img:
+        src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP2110_Cloud_Compute_Proj/main/images/ESeeParkXAws.webp"
+        style:
+          borderRadius: '0.5rem'
+          backgroundColor: '#d1d6a5'
+
 page:
   MazeRunner:
     title: 
@@ -1145,6 +1168,71 @@ page:
           mb: '0.1em'
           color: '#bdae77'
       link: "https://player.vimeo.com/video/1091072147?h=c793e32e2d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+
+  ESeePark X AWS:
+    title: 
+      text: "A car parking slot detection web application under AWS infrastructure"
+      style:
+        fontSize: "2rem"
+        color: "#c9bfa9"
+    lang: 
+      icon: "javascript"
+    lang2: 
+      icon: "python"
+    lib:
+      icon: "react"
+    lib2:
+      icon: "ultralytics"
+    ide: 
+      icon: "aws"
+    github: 
+      link: "https://github.com/Samuel-Chow-demon/CSTP2110_Cloud_Compute_Proj"
+      text: "GitHub & ReadME"
+    img:
+      src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP2110_Cloud_Compute_Proj/main/images/ESeeParkXAws.webp"
+      style:
+        width: '100%'
+        height: 'auto'
+        borderRadius: '1.5rem'
+        scale: '1.3'
+
+    description:
+      style:
+        mb: '2rem'
+      list:
+        subheader:
+          text: "Project Description"
+          style:
+            fontSize: '22px'
+            mb: '0.5em'
+            color: '#bdae77'
+        points:
+        - point: "This project is implementing the administrative section from the 'JustPark' Project under AWS infrastructure and named as 'ESeePark'"
+        - point: "Frontend and Backend services are deployed through AWS EC2 Instances under AWS VPC network system"
+        - point: "Frontend utilizes AWS Cognito for registration, authenication and confirmation"
+        - point: "New account registration invokes AWS Lambda to pass the data into AWS DynamoDB for storage"
+        - point: "On the other hand, Backend runs a server on listening to the Frontend request"
+        - point: "Detection model and data are stored in a AWS S3 bucket which infrastructuring as a network drive for the Backend instance through AWS Storage Gateway service"
+        - point: "A proxy server at the frontend public EC2 Instnace is also introduced to redirect the request from public IP client to private backend"
+
+    images:
+      subheader:
+        text: "AWS System Architecture"
+        style:
+          width: '100%'
+          fontSize: '22px'
+          mt: '1rem'
+          mb: '0.1em'
+          color: '#bdae77'
+      imgList:
+        - img:
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/CSTP2110_Cloud_Compute_Proj/main/images/SystemArchitecture_v3.webp"
+            hover: true
+            style:
+              width: '35rem'
+              height: '28rem'
+              borderRadius: '0.5rem'
+
 
     
 
