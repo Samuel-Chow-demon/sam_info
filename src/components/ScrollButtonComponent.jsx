@@ -1,6 +1,8 @@
 import {memo, useEffect, useRef, useState} from 'react'
 import ScrollButton from './ScrollButton';
 
+const rootDom = document.getElementById('root');
+
 const ScrollButtonComponent = ({stepLabelDomRef}) => {
 
     const [scrollButtonTop, setScrollButtonTop] = useState(window.innerHeight / 2);
@@ -23,7 +25,6 @@ const ScrollButtonComponent = ({stepLabelDomRef}) => {
 
     useEffect(()=>{
 
-        const rootDom = document.getElementById('root');
         if (!rootDom)
         {
             return;
@@ -71,15 +72,35 @@ const ScrollButtonComponent = ({stepLabelDomRef}) => {
 
     }, []);
 
+    const customScrollIntoView = (element) =>{
+
+        if (element)
+        {
+            const top = element.offsetTop;
+
+            rootDom.scrollTo({
+                top : top,
+                behavior: 'smooth'
+            });
+        }
+    }
+
     const scrollUpClick = ()=>{
 
         if (activeLabelIdx.current >= 0)
         {
             const offset = (activeLabelIdxDiff.current <= 1) ? 1 : 0;
-            stepLabelDomRef.current[activeLabelIdx.current - offset]?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            })
+
+            customScrollIntoView(stepLabelDomRef.current[activeLabelIdx.current - offset]);
+
+            // Cannot direct use scrollIntoView since it would affect the iframe at the parent app
+            // stepLabelDomRef.current[activeLabelIdx.current - offset]?.scrollIntoView({
+            //     behavior: 'smooth',
+            //     block: 'start',
+            //     inline: 'nearest'
+            // });
+
+            window.parent.postMessage('invalidate-scene', '*');
         }
     }
 
@@ -87,10 +108,15 @@ const ScrollButtonComponent = ({stepLabelDomRef}) => {
 
         if (activeLabelIdx.current >= -1)
         {
-            stepLabelDomRef.current[activeLabelIdx.current + 1]?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            })
+             customScrollIntoView(stepLabelDomRef.current[activeLabelIdx.current + 1]);
+
+            // Cannot direct use scrollIntoView since it would affect the iframe at the parent app
+            // stepLabelDomRef.current[activeLabelIdx.current + 1]?.scrollIntoView({
+            //     behavior: 'smooth',
+            //     block: 'start',
+            //     inline: 'nearest'
+            // });
+            window.parent.postMessage('invalidate-scene', '*');
         }
     }
 
