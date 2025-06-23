@@ -32,6 +32,7 @@ import mui from '../assets/package/materialui.webp';
 import opencv from '../assets/package/opencv.webp';
 import ultralytics from '../assets/package/ultralytics.webp';
 import scikitlearn from '../assets/package/scikit-learn.webp';
+import atmel from '../assets/package/atmel.png'
 
 // tool
 import git from '../assets/tool/git.webp';
@@ -78,6 +79,7 @@ const iconTexture = {
     "opencv" : opencv,
     "ultralytics" : ultralytics,
     "scikit" : scikitlearn,
+    "atmel" : atmel,
 
     "git" : git,
     "github" : github,
