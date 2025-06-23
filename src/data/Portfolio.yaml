@@ -141,6 +141,18 @@ projNapp:
           borderRadius: '0.5rem'
           backgroundColor: '#d1d6a5'
 
+  - pna:
+      name: "Robocon 2008 HK Contest"
+      category: "Robocon"
+      lang: 
+        icon: "C"
+      lib:
+        icon: "atmel"
+      img:
+        src: "https://drive.google.com/thumbnail?id=1A3rEzeAys6j_lovkRF-qwGPl4wYv80oc&sz=w500"
+        style:
+          borderRadius: '0.5rem'
+
 page:
   MazeRunner:
     title: 
@@ -1232,6 +1244,168 @@ page:
               width: '35rem'
               height: '28rem'
               borderRadius: '0.5rem'
+
+  Robocon 2008 HK Contest:
+    title: 
+      text: "Robocon 2008 HK Contest - Automatic Robot"
+      style:
+        fontSize: "2rem"
+        color: "#c9bfa9"
+    lang: 
+      icon: "C"
+    lib:
+      icon: "atmel"
+    img:
+        src: "https://drive.google.com/thumbnail?id=1A3rEzeAys6j_lovkRF-qwGPl4wYv80oc&sz=w500"
+        style:
+          width: '100%'
+          height: 'auto'
+          borderRadius: '1.5rem'
+
+    description:
+      style:
+        mb: '2rem'
+      list:
+        subheader:
+          text: "Description"
+          style:
+            fontSize: '22px'
+            mb: '0.5em'
+            color: '#bdae77'
+        points:
+        - point: "Unfortunately, all the board schematics and the source codes are lost :("
+        - point: "The hardware system can be simply described as follows :"
+          content:
+              listGp:
+                - value:
+                    list:
+                      subheader:
+                        text: "MCU : Atmega 128 x 2"
+                        style:
+                            mb: '0.5em'
+                      points:
+                      - point: "Master MCU for navigation control"
+                      - point: "Slave MCU for sensor management"
+
+                - value:
+                    list:
+                      subheader:
+                        text: "Motor Control : Maxon Motor, Driver, LM628, DAC0800, optocoupler"
+                        style:
+                            mb: '0.5em'
+                      points:
+                      - point: "ATmgea128 PWM Interrupt Port →"
+                      - point: "LM628 Precision motor control chip →"
+                      - point: "Optocoupler (noise isolation) →"
+                      - point: "DAC0800 (since motor driver takes in +/-12VDC) →"
+                      - point: "Maxon motor driver →"
+                      - point: "Maxon brushless motor"
+
+                - value:
+                    list:
+                      subheader:
+                        text: "Navigation Position Feedback : Optical Encoder, HTCL2020"
+                        style:
+                            mb: '0.5em'
+                      points:
+                      - point: "External optical encoder →"
+                      - point: "HCTL 2020 (decode) →"
+                      - point: "16 bit digit counter →"
+                      - point: "One Atmega128 port with high low byte shift"
+                  
+                - value:
+                    list:
+                      subheader:
+                        text: "Other DC Motor : 12800 H-bridge"
+                        style:
+                            mb: '0.5em'
+                      points:
+                      - point: "ATmgea128 PWM interrupt port →"
+                      - point: "12800 H-bridge →"
+                      - point: "DC / Servo motor"
+
+                - value:
+                    list:
+                      subheader:
+                        text: "Communication : ISP, I2C"
+                        style:
+                            mb: '0.5em'
+                      points:
+                      - point: "ISP → program write"
+                      - point: "I2C → master-slave MCU"
+
+                - value:
+                    list:
+                      subheader:
+                        text: "Sensing : Utrasonic sensor, infra-red emitter and receiver stack"
+                        style:
+                            mb: '0.5em'
+                      points:
+                      - point: "Utrasonic sensor for object sensing"
+                      - point: "Infra-red sensor for line tracking"
+
+                - value:
+                    list:
+                      subheader:
+                        text: "Power : DC-DC Converter"
+                        style:
+                            mb: '0.5em'
+                      points:
+                      - point: "DC-DC Converter with 24 VDC to +/-12VDC"
+                      - point: "24VDC to 9VDC → 7805 → 5VDC"
+
+    images:
+      subheader:
+        text: "Automatic robot images"
+        style:
+          width: '100%'
+          fontSize: '22px'
+          mt: '1rem'
+          mb: '0.1em'
+          color: '#bdae77'
+      imgList:
+        - img:
+            subheader:
+              text: "Lab Test"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://drive.google.com/thumbnail?id=1j84wFh3awp3s9MCmNYCH5BSwEvrTEgvM&sz=w1000"
+            hover: true
+            style:
+              width: '19rem'
+              height: '25rem'
+              borderRadius: '0.5rem'
+
+        - img:
+            subheader:
+              text: "Field Run"
+              style:
+                  width: '100%'
+                  fontSize: '16px'
+                  ml: '0.5rem'
+                  mb: '0'
+                  color: '#bdae77'
+            src: "https://drive.google.com/thumbnail?id=10dQlaS3CCFgCGBfp1PBtBVyKoqghj9qi&sz=w1000"
+            hover: true
+            style:
+              width: '19rem'
+              height: '25rem'
+              borderRadius: '0.5rem'
+
+    video:
+      subheader:
+        text: "Contest Video"
+        style:
+          width: '100%'
+          fontSize: '22px'
+          mt: '1rem'
+          mb: '0.1em'
+          color: '#bdae77'
+      link: "https://player.vimeo.com/video/1095505337?h=ca02c000fc&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
 
 
     
