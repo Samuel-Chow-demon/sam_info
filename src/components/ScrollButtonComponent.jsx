@@ -23,6 +23,42 @@ const ScrollButtonComponent = ({stepLabelDomRef}) => {
 
     }, [scrollButtonRef.current]);
 
+    const checkScrollCurrentIndex = ()=>{
+
+        activeLabelIdx.current = -1;
+
+        const entries = Object.values(stepLabelDomRef.current);
+
+        let minIndex = -1;
+        let minValue = -1;
+
+        // Find all the label position to the pointer difference
+        for (let i = 0; i < entries.length; i++)
+        {
+            const dom = entries[i];
+
+            const isScrollFarBelowTop = (rootDom.scrollTop - dom.offsetTop) > 5;
+
+            const diff = Math.abs(rootDom.scrollTop - dom.offsetTop);
+
+            //console.log(`${i} - diff ${diff}`);
+            if (minValue < 0 || 
+                (diff < minValue) && !isScrollFarBelowTop)
+            {
+                minValue = diff;
+                minIndex = i;
+            }
+        }
+
+        if (minValue >= 0)
+        {
+            activeLabelIdx.current = minIndex;
+            activeLabelIdxDiff.current = minValue;
+        }
+
+        setDisplayScrollButton((activeLabelIdx.current >= 0) ? 'block' : 'none');
+    }
+
     useEffect(()=>{
 
         if (!rootDom)
@@ -30,44 +66,30 @@ const ScrollButtonComponent = ({stepLabelDomRef}) => {
             return;
         }
 
+        let debounceChecker = null;
+
         const handleScrollY = ()=>{
 
-            activeLabelIdx.current = -1;
-
-            const entries = Object.values(stepLabelDomRef.current);
-
-            let minIndex = -1;
-            let minValue = -1;
-
-            // Find all the label position to the pointer difference
-            for (let i = 0; i < entries.length; i++)
+            if (debounceChecker)
             {
-                const dom = entries[i];
-
-                const diff = rootDom.scrollTop - dom.offsetTop;
-
-                //console.log(`${i} - diff ${diff}`);
-
-                if (diff >= 0 && (minValue < 0 || diff < minValue))
-                {
-                    minValue = diff;
-                    minIndex = i;
-                }
+                clearTimeout(debounceChecker);
             }
 
-            if (minValue >= 0)
-            {
-                activeLabelIdx.current = minIndex;
-                activeLabelIdxDiff.current = minValue;
-            }
-
-            setDisplayScrollButton((activeLabelIdx.current >= 0) ? 'block' : 'none');
+            debounceChecker = setTimeout(()=>{
+                checkScrollCurrentIndex();
+            }, 100);
+            
         };
 
         rootDom.addEventListener('scroll', handleScrollY);
 
         return ()=>{
             rootDom.removeEventListener('scroll', handleScrollY);
+
+            if (debounceChecker)
+            {
+                clearTimeout(debounceChecker);
+            }
         }
 
     }, []);
@@ -89,9 +111,8 @@ const ScrollButtonComponent = ({stepLabelDomRef}) => {
 
         if (activeLabelIdx.current >= 0)
         {
-            const offset = (activeLabelIdxDiff.current <= 1) ? 1 : 0;
-
-            customScrollIntoView(stepLabelDomRef.current[activeLabelIdx.current - offset]);
+            const nextDom = (activeLabelIdx.current - 1 >= 0) ? stepLabelDomRef.current[activeLabelIdx.current - 1] : null;
+            customScrollIntoView(nextDom);
 
             // Cannot direct use scrollIntoView since it would affect the iframe at the parent app
             // stepLabelDomRef.current[activeLabelIdx.current - offset]?.scrollIntoView({
@@ -108,7 +129,8 @@ const ScrollButtonComponent = ({stepLabelDomRef}) => {
 
         if (activeLabelIdx.current >= -1)
         {
-             customScrollIntoView(stepLabelDomRef.current[activeLabelIdx.current + 1]);
+            const nextDom = (activeLabelIdx.current + 1 < Object.keys(stepLabelDomRef.current).length) ? stepLabelDomRef.current[activeLabelIdx.current + 1] : null;
+             customScrollIntoView(nextDom);
 
             // Cannot direct use scrollIntoView since it would affect the iframe at the parent app
             // stepLabelDomRef.current[activeLabelIdx.current + 1]?.scrollIntoView({
