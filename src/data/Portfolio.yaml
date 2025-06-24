@@ -1380,22 +1380,6 @@ page:
               height: '25rem'
               borderRadius: '0.5rem'
 
-        - img:
-            subheader:
-              text: "Field Run"
-              style:
-                  width: '100%'
-                  fontSize: '16px'
-                  ml: '0.5rem'
-                  mb: '0'
-                  color: '#bdae77'
-            src: "https://drive.google.com/thumbnail?id=10dQlaS3CCFgCGBfp1PBtBVyKoqghj9qi&sz=w1000"
-            hover: true
-            style:
-              width: '19rem'
-              height: '25rem'
-              borderRadius: '0.5rem'
-
     video:
       subheader:
         text: "Contest Video"

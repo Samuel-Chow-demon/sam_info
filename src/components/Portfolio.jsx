@@ -35,8 +35,6 @@ const Portfolio = () => {
         };
         setSection(data);
 
-        console.log(data);
-
         setIsLoading(false);
 
     }, []);
