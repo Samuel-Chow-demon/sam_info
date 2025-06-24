@@ -149,7 +149,7 @@ projNapp:
       lib:
         icon: "atmel"
       img:
-        src: "https://drive.google.com/thumbnail?id=1A3rEzeAys6j_lovkRF-qwGPl4wYv80oc&sz=w500"
+        src: "https://raw.githubusercontent.com/Samuel-Chow-demon/sam_info/main/src/assets/portfolio/robocon2008_HK_contest-min.jpg"
         style:
           borderRadius: '0.5rem'
 
@@ -1256,11 +1256,11 @@ page:
     lib:
       icon: "atmel"
     img:
-        src: "https://drive.google.com/thumbnail?id=1A3rEzeAys6j_lovkRF-qwGPl4wYv80oc&sz=w500"
-        style:
-          width: '100%'
-          height: 'auto'
-          borderRadius: '1.5rem'
+      src: "https://raw.githubusercontent.com/Samuel-Chow-demon/sam_info/main/src/assets/portfolio/robocon2008_HK_contest-min.jpg"
+      style:
+        width: '100%'
+        height: 'auto'
+        borderRadius: '1.5rem'
 
     description:
       style:
@@ -1373,7 +1373,7 @@ page:
                   ml: '0.5rem'
                   mb: '0'
                   color: '#bdae77'
-            src: "https://drive.google.com/thumbnail?id=1j84wFh3awp3s9MCmNYCH5BSwEvrTEgvM&sz=w1000"
+            src: "https://raw.githubusercontent.com/Samuel-Chow-demon/sam_info/main/src/assets/portfolio/autoRobotLab.webp"
             hover: true
             style:
               width: '19rem'
