@@ -1,14 +1,15 @@
-import { Card, CardHeader, Chip, Grid, Tooltip } from '@mui/material'
+import { Card, CardHeader, Chip, Grid, Tooltip, Button } from '@mui/material'
 import {memo} from 'react'
 import { PARAGRAPH_BKGRD_COLOR, PARAGRAPH_STYLE } from '../script/constant'
 import { conditionalStyle } from '../utility/style'
 import useYamlCfgStyle from '../hook/useYamlCfgStyle'
-import { amber, blue, deepPurple, grey, purple} from '@mui/material/colors'
+import { amber, blue, deepPurple, grey} from '@mui/material/colors'
 import IconComponent from './IconComponent'
 import ReplyIcon from '@mui/icons-material/Reply';
 import VideoPlayer from './VideoPlayer'
 import CastIcon from '@mui/icons-material/Cast';
 import DescriptionIcon from '@mui/icons-material/Description';
+import { useState } from 'react'
 
 const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
 
