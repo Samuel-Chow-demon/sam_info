@@ -1,4 +1,4 @@
-import {memo, useEffect, useRef, useState} from 'react'
+import {memo, useEffect, useMemo, useRef, useState} from 'react'
 
 import {useLoader, useFrame} from '@react-three/fiber'
 import {Color, CylinderGeometry, DoubleSide, FrontSide, TextureLoader,
@@ -23,11 +23,24 @@ const Badge = ({id,
                 textureOffset = -0.05,
                 onGUI = true}) => 
 {
-    const [params, setParams] = useState({radiusTop, radiusBottom, height,
-        radialSeg, heightSeg, openEnded, thetaLength});
+    // const [params, setParams] = useState({radiusTop, radiusBottom, height,
+    //     radialSeg, heightSeg, openEnded, thetaLength});
 
-    const [geometry, setGeometry] = useState(new CylinderGeometry(radiusTop, radiusBottom, height,
-                                                radialSeg, heightSeg, openEnded, 0, thetaLength));
+    // const [geometry, setGeometry] = useState(new CylinderGeometry(radiusTop, radiusBottom, height,
+    //                                             radialSeg, heightSeg, openEnded, 0, thetaLength));
+
+    const geometry = useMemo(() => {
+        return new CylinderGeometry(
+        radiusTop,
+        radiusBottom,
+        height,
+        radialSeg,
+        heightSeg,
+        openEnded,
+        0,
+        thetaLength
+        );
+    }, [radiusTop, radiusBottom, height, radialSeg, heightSeg, openEnded, thetaLength]);
 
     const texture = texturePath ? useLoader(TextureLoader, texturePath) : null;
 
@@ -68,31 +81,31 @@ const Badge = ({id,
         }
       });
 
-    useEffect(()=>{
+    // useEffect(()=>{
 
-        setParams({radiusTop, radiusBottom, height,
-                radialSeg, heightSeg, openEnded, thetaLength});
+    //     setParams({radiusTop, radiusBottom, height,
+    //             radialSeg, heightSeg, openEnded, thetaLength});
 
-    }, [radiusTop, radiusBottom, height,
-        radialSeg, heightSeg, openEnded, thetaLength]);
+    // }, [radiusTop, radiusBottom, height,
+    //     radialSeg, heightSeg, openEnded, thetaLength]);
 
-    useEffect(()=>{
+    // useEffect(()=>{
 
-        if (meshRef.current)
-        {
-            const { radiusTop, radiusBottom, height, radialSeg, heightSeg, openEnded, thetaLength } = params;
+    //     if (meshRef.current)
+    //     {
+    //         const { radiusTop, radiusBottom, height, radialSeg, heightSeg, openEnded, thetaLength } = params;
 
-            const newGeometry = new CylinderGeometry(radiusTop, radiusBottom, height,
-                radialSeg, heightSeg, openEnded, 0, thetaLength);
+    //         const newGeometry = new CylinderGeometry(radiusTop, radiusBottom, height,
+    //             radialSeg, heightSeg, openEnded, 0, thetaLength);
             
-            meshRef.current.geometry.dispose();
-            meshRef.current.geometry = newGeometry;
+    //         meshRef.current.geometry.dispose();
+    //         meshRef.current.geometry = newGeometry;
 
-            setGeometry(newGeometry);
-        }
+    //         setGeometry(newGeometry);
+    //     }
 
-    }, [params.radiusTop, params.radiusBottom, params.height,
-        params.radialSeg, params.heightSeg, params.openEnded, params.thetaLength]);
+    // }, [params.radiusTop, params.radiusBottom, params.height,
+    //     params.radialSeg, params.heightSeg, params.openEnded, params.thetaLength]);
 
 
     return (

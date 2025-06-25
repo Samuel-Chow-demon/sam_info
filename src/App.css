@@ -1,0 +1,6 @@
+.bg-cover{
+    background-image: url('./assets/bg-3-min.jpg');
+    background-position: 'center';
+    background-size: 'cover';
+    background-repeat: 'no-repeat';
+}

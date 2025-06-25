@@ -2,20 +2,22 @@ import InfoBar from './components/InfoBar'
 import { Box, Grid } from '@mui/material'
 import Dashboard from './components/Dashboard'
 import {GRID_PADDING_VALUE_PX} from './script/constant.js'
-import bgImage from './assets/bg-3-min.jpg'
+// import bgImage from './assets/bg-3-min.jpg'
+import './App.css'
 
 function App() {
   
   return (
     <>
-      <Box 
+      <Box
+      className="bg-cover"
       sx={{
         width: '100%',
         minHeight: '100vh',
-        backgroundImage: `url(${bgImage})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
+        // backgroundImage: `url(${bgImage})`,
+        // backgroundPosition: 'center',
+        // backgroundSize: 'cover',
+        // backgroundRepeat: 'no-repeat',
       }}>
         <Grid container spacing={{sm:3, md:3, lg:6}} sx={{
           padding: `${GRID_PADDING_VALUE_PX}px`
