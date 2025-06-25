@@ -1,4 +1,3 @@
-import React from 'react'
 import Box from '@mui/material/Box';
 import { alpha, Avatar, Chip, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material';
 import { grey } from '@mui/material/colors';
@@ -6,40 +5,37 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import Divider from '@mui/material/Divider';
-import profilePic from '../assets/profilePic2.png'
+import profilePic from '../assets/sam.png'
 
 import {GRID_PADDING_VALUE_PX, INFO_COLOR} from '../script/constant'
+import { memo } from 'react';
 
+const tagList = ["Mechatronic Engineer", "Software Engineer / Developer", "Academic Researcher"];
 
-export const InfoBar = () => {
+const contactItemList = [
+  {
+    "icon": MailOutlineIcon,
+    "content": "demondemontcchow @gmail.com",
+    "href" : "https://mail.google.com/mail/?view=cm&fs=1&to=demondemontcchow@gmail.com"
+  },
+  {
+    "icon": LocationOnIcon,
+    "content": "Burnaby, Vancouver, B.C., Canada",
+    "href" : null
+  },
+  {
+    "icon": LinkedInIcon,
+    "content" : "linkedin/SamuelChow",
+    "href": "https://www.linkedin.com/in/samueltcchow/"
+  },
+  {
+    "icon": GitHubIcon,
+    "content": "github/SamuelChow",
+    "href": "https://github.com/Samuel-Chow-demon"
+  }
+];
 
-  const tagList = ["Mechatronic Engineer", "Software Engineer / Developer", "Academic Researcher"];
-
-  const contactItemList = [
-    {
-      "icon": MailOutlineIcon,
-      "content": "demondemontcchow @gmail.com",
-      "href" : "https://mail.google.com/mail/?view=cm&fs=1&to=demondemontcchow@gmail.com"
-    },
-    {
-      "icon": LocationOnIcon,
-      "content": "Burnaby, Vancouver, B.C., Canada",
-      "href" : null
-    },
-    {
-      "icon": LinkedInIcon,
-      "content" : "linkedin/SamuelChow",
-      "href": "https://www.linkedin.com/in/samueltcchow/"
-    },
-    {
-      "icon": GitHubIcon,
-      "content": "github/SamuelChow",
-      "href": "https://github.com/Samuel-Chow-demon"
-    }
-  ]
-
-  const InfoListItem = ({IconComponent, content, href, color, sizeScale = 1})=>{
+const InfoListItem = memo(({IconComponent, content, href, color, sizeScale = 1})=>{
 
     return (
       <ListItem sx={{
@@ -92,7 +88,9 @@ export const InfoBar = () => {
         </ListItemText >
       </ListItem>
     );
-  };
+  });
+
+const InfoBar = () => {
 
   return (
     <Box sx={{
@@ -118,6 +116,9 @@ export const InfoBar = () => {
            width : '8rem',
            height: '8rem',
            marginTop: 5}}
+        slotProps={{
+          img:{fetchPriority: 'high'}
+        }}
       />
 
       <Typography variant='h5' sx={{
@@ -147,8 +148,6 @@ export const InfoBar = () => {
       
       </div>
 
-      
-
       <List sx={{
         width: "100%",
         display:'flex',
@@ -174,3 +173,5 @@ export const InfoBar = () => {
     </Box>
   )
 }
+
+export default memo(InfoBar);

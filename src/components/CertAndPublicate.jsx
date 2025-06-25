@@ -34,8 +34,6 @@ const CertAndPublicate = () => {
         };
         setSection(data);
 
-        //console.log(data);
-
         setIsLoading(false);
 
     }, []);
@@ -81,7 +79,7 @@ const CertAndPublicate = () => {
                         return ((obj.cnp.category === category || 
                                  category === allCategoryKey) ?
     
-                            <Grid item key={`${id}-gridcard-${index}`}
+                            <Grid key={`${id}-gridcard-${index}`}
                                 size={{xs:2, sm: 4, md: 4}}    
                             >
     
@@ -96,7 +94,7 @@ const CertAndPublicate = () => {
         );
     });
 
-    const Content = ({id, sectionObj})=>{
+    const Content = memo(({id, sectionObj})=>{
 
         return (
     
@@ -151,9 +149,7 @@ const CertAndPublicate = () => {
             </Box>
            </>
         );
-    }
-
-    
+    });
 
     const CardComponent = memo(({id, compObj, index})=>{
 

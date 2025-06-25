@@ -5,8 +5,8 @@ import portfolioYamlFile from '../data/Portfolio.yaml?raw'
 
 import ContentContainer from './ContentContainer';
 
-import { blue, grey, purple } from '@mui/material/colors';
-import { Box, Card, CardHeader, CardMedia, Grid, Icon, Stack, Tab, Tabs, Tooltip } from '@mui/material';
+import { grey, purple } from '@mui/material/colors';
+import { Box, Card, CardHeader, CardMedia, Grid, Stack, Tab, Tabs, Tooltip } from '@mui/material';
 import { conditionalStyle } from '../utility/style';
 import IconComponent from './IconComponent';
 import Loading from './Loading';
@@ -16,6 +16,8 @@ import PortfolioContent from './PortfolioContent';
 const allCategoryKey = "All";
 
 const rootDom = document.getElementById('root');
+
+
 
 const Portfolio = () => {
     
@@ -66,13 +68,13 @@ const Portfolio = () => {
 
                         
                         return ((obj.pna.category === category || 
-                                 category === allCategoryKey) ?
-    
+                                    category === allCategoryKey) ?
+
                             <Grid key={`${id}-gridcard-${index}`}
                                 size={{ xs:2, sm: 4, md: 4}}>
-    
+
                                 <CardComponent id={id} compObj={obj.pna} index={index}/>
-    
+
                             </Grid> : null);
                             
                     })
@@ -225,7 +227,7 @@ const Portfolio = () => {
         );
     });
 
-    const Content = ({id, sectionObj})=>{
+    const Content = memo(({id, sectionObj})=>{
 
         const TabsComponent = ({objList})=>{
 
@@ -267,7 +269,7 @@ const Portfolio = () => {
 
                 </Tabs>
             );
-        }
+        };
 
         return (
     
@@ -287,7 +289,7 @@ const Portfolio = () => {
 
             </Box>
         );
-    }
+    });
     
     return (
         <>
@@ -313,4 +315,4 @@ const Portfolio = () => {
     );
 }
 
-export default Portfolio;
+export default memo(Portfolio);

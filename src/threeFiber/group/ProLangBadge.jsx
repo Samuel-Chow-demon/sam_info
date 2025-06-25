@@ -1,4 +1,4 @@
-import {useEffect, useState, useRef} from 'react'
+import {memo, useRef} from 'react'
 
 import Badge from '../components/Badge';
 
@@ -15,10 +15,6 @@ const ProLangBadge = ({proLangList,
                       color = 0x573254}) => {
 
     const groupRef = useRef();
-
-    useEffect(()=>{
-        
-    }, [])
 
     const AllLangComponents = ()=>{
 
@@ -66,4 +62,4 @@ const ProLangBadge = ({proLangList,
     )
 }
 
-export default ProLangBadge
+export default memo(ProLangBadge);

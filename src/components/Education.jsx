@@ -43,20 +43,6 @@ const Education = () => {
         stepLabelDOM.current[index] = dom;
     }
 
-    // const clickPrintPos = ()=>{
-
-    //     console.log("window height", window.innerHeight);
-    //     console.log("Y height", rootDom.offsetHeight);
-    //     console.log("Y scroll", rootDom.scrollTop);
- 
-    //     Object.values(stepLabelDOM.current).forEach((dom, idx)=>{
-    //         console.log(`${idx} - ${dom.offsetTop}`);
-    //     })
-    //     Object.values(contentStepDOM.current).forEach((dom, idx)=>{
-    //         console.log(`Content Height ${idx} - ${dom.offsetHeight}`);
-    //     })
-    // }
-
     const Content = ()=>{
 
         return (
@@ -188,4 +174,4 @@ const Education = () => {
     );
 }
 
-export default Education
+export default memo(Education);

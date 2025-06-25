@@ -1,4 +1,4 @@
-import {useEffect, useState, Suspense, lazy, useRef} from 'react'
+import {useEffect, useState, Suspense, lazy, useRef, memo} from 'react'
 
 import { Canvas } from '@react-three/fiber';
 
@@ -110,4 +110,4 @@ const DisplayAllBadge = () => {
     )
 }
 
-export default DisplayAllBadge
+export default memo(DisplayAllBadge);

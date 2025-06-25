@@ -1,9 +1,9 @@
 import { Box, Stepper, Step, StepButton, alpha } from '@mui/material'
 import { grey } from '@mui/material/colors'
 import {GRID_PADDING_VALUE_PX,
-        INFO_COLOR, PARAGRAPH_BKGRD_COLOR,
+        INFO_COLOR,
         } from '../script/constant'
-import {useEffect, useState} from 'react'
+import {memo, useEffect, useMemo, useState} from 'react'
 
 import categoryYamlFile from '../data/Category.yaml?raw'
 import yaml from 'js-yaml'
@@ -16,7 +16,7 @@ import CertAndPublicate from './CertAndPublicate'
 import SkillAndLang from './SkillAndLang'
 import Portfolio from './Portfolio'
 
-export const Dashboard = () => {
+const Dashboard = () => {
 
   const [isLoading, setIsLoading] = useState(true);
   const [activeCat, setActiveCat] = useState(0);
@@ -34,29 +34,42 @@ export const Dashboard = () => {
 
   const CategoryContent = ()=>{
 
-    switch (activeCat)
-    {
-      case 0:
-        return <About />;
-       
-      case 1:
-        return <Education />
+    const ActiveComponent = useMemo(()=>{
 
-      case 2:
-        return <WorkExperience />
-      
-      case 3:
-        return <Portfolio />
-
-      case 4:
-        return <CertAndPublicate />
-      
-      case 5:
-        return <SkillAndLang />
-
-      default:
-        return <></>;
-    }
+      switch (activeCat)
+      {
+        // case 0:
+        //   return <About />;
+         
+        case 1:
+          return <Education />
+  
+        case 2:
+          return <WorkExperience />
+        
+        case 3:
+          return <Portfolio />
+  
+        case 4:
+          return <CertAndPublicate />
+        
+        case 5:
+          return <SkillAndLang />
+  
+        default:
+          return <></>;
+      }
+    }, [activeCat]);
+    
+    return (
+      <>
+        {/* here persist the About Component from unmount since it had canvas dom */}
+        {
+          activeCat === 0 ? <About /> : <Box sx={{ display: 'none' }}><About /></Box>
+        }
+        {ActiveComponent}
+      </>
+    )
   }
 
   useEffect(()=>{
@@ -144,3 +157,5 @@ export const Dashboard = () => {
     </>
   )
 }
+
+export default memo(Dashboard);

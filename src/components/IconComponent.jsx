@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import iconTexture from '../utility/iconTexture';
 
 const IconComponent = ({iconTag, 
@@ -20,4 +21,4 @@ const IconComponent = ({iconTag,
         )
     }
 
-export default IconComponent;
+export default memo(IconComponent);

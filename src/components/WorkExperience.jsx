@@ -43,7 +43,7 @@ const WorkExperience = () => {
         stepLabelDOM.current[index] = dom;
     }
 
-    const Content = ()=>{
+    const Content = memo(()=>{
 
         return (
     
@@ -62,7 +62,7 @@ const WorkExperience = () => {
 
             </Stepper>
         );
-    }
+    });
 
     const MemoizedContentComponent = memo(ContentComponent);
 
@@ -184,4 +184,4 @@ const WorkExperience = () => {
     );
 }
 
-export default WorkExperience
+export default memo(WorkExperience);

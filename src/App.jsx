@@ -1,9 +1,8 @@
-import { useState } from 'react'
-import { InfoBar } from './components/InfoBar'
-import { Box, Grid, Paper } from '@mui/material'
-import { Dashboard } from './components/Dashboard'
+import InfoBar from './components/InfoBar'
+import { Box, Grid } from '@mui/material'
+import Dashboard from './components/Dashboard'
 import {GRID_PADDING_VALUE_PX} from './script/constant.js'
-import bgImage from './assets/bg-3.jpg'
+import bgImage from './assets/bg-3-min.jpg'
 
 function App() {
   
