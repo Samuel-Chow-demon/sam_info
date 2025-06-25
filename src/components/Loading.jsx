@@ -1,5 +1,5 @@
 import { Box, CircularProgress, Typography } from '@mui/material'
-import {} from 'react'
+import { memo } from 'react'
 
 import {INFO_COLOR, PARAGRAPH_BKGRD_COLOR} from '../script/constant'
 
@@ -28,4 +28,4 @@ const Loading = ({minHeight = 500, bkgrdColor = PARAGRAPH_BKGRD_COLOR}) => {
   )
 }
 
-export default Loading
+export default memo(Loading);

@@ -1,5 +1,5 @@
-import { Avatar, Button, Card, CardHeader, Chip, Grid, Tooltip } from '@mui/material'
-import {memo, useEffect, useState} from 'react'
+import { Card, CardHeader, Chip, Grid, Tooltip } from '@mui/material'
+import {memo} from 'react'
 import { PARAGRAPH_BKGRD_COLOR, PARAGRAPH_STYLE } from '../script/constant'
 import { conditionalStyle } from '../utility/style'
 import useYamlCfgStyle from '../hook/useYamlCfgStyle'
@@ -373,9 +373,8 @@ const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
 
         </div>
 
-        
     </Card>
     )
 }
 
-export default PortfolioContent
+export default memo(PortfolioContent);

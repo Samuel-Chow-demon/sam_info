@@ -1,5 +1,6 @@
 import { Box, LinearProgress, Typography } from '@mui/material'
 import PropTypes from 'prop-types';
+import { memo } from 'react';
 
 const transformedValue = (value, min, max)=>{
     return (value - min) * 100 / (max - min)
@@ -10,7 +11,7 @@ const defaultTextControl = {
     isPercentageStyle : true    // false show the "value / full"  portion style
 }
 
-const ProgressBarWithLabel = ({value, full,
+const ProgressBarWithLabel = memo(({value, full,
                                 textControl=defaultTextControl,
                                 componentStyle={},
                                 barStyle={},
@@ -59,7 +60,7 @@ const ProgressBarWithLabel = ({value, full,
             
         </Box>
     )
-}
+});
 
 ProgressBarWithLabel.propTypes = {
   /**

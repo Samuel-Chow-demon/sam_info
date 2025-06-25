@@ -1,6 +1,6 @@
 
-import {useEffect, useState} from 'react'
-import {INFO_COLOR, PARAGRAPH_BKGRD_COLOR, PARAGRAPH_STYLE} from '../script/constant'
+import {memo, useEffect, useState} from 'react'
+import {PARAGRAPH_STYLE} from '../script/constant'
 
 import aboutYamlFile from '../data/About.yaml?raw'
 import yaml from 'js-yaml'
@@ -66,4 +66,4 @@ const About = () => {
     )
 }
 
-export default About
+export default memo(About);

@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react'
+import {memo, useEffect, useRef, useState} from 'react'
 
 import {useLoader, useFrame} from '@react-three/fiber'
 import {Color, CylinderGeometry, DoubleSide, FrontSide, TextureLoader,
@@ -67,39 +67,6 @@ const Badge = ({id,
           meshRef.current.rotation.x += randomRotationX;
         }
       });
-
-    // const {gui, 
-    //         geoFolderRef,
-    //         setAddGeoFolderCallBack} = useGuiControl({id: id, 
-    //                                             meshRef: meshRef,
-    //                                             onGUI: onGUI,
-    //                                             isUniformScale: true
-    //                                             });
-
-    // useEffect(()=>{
-    
-    //     if (onGUI)
-    //     {
-    //         if (gui && geoFolderRef)
-    //         {
-    //             setAddGeoFolderCallBack(()=>{
-    //                 const geoFolder = gui.addFolder(`${id} - Geo`);
-    //                 geoFolder.add(params, 'radiusTop', 0.1, 50).step(0.01).onChange(val=>setParams(prev=>({...prev, radiusTop: val})));
-    //                 geoFolder.add(params, 'radiusBottom', 0.1, 50).step(0.01).onChange(val=>setParams(prev=>({...prev, radiusBottom: val})));
-    //                 geoFolder.add(params, 'height', 0.1, 50).step(0.01).onChange(val=>setParams(prev=>({...prev, height: val})));
-    //                 geoFolder.add(params, 'radialSeg', 1, 64).step(1).onChange(val=>setParams(prev=>({...prev, radialSeg: val})));
-    //                 geoFolder.add(params, 'thetaLength', 0, Math.PI * 2).step(0.01).onChange(val=>setParams(prev=>({...prev, thetaLength: val})));
-    //                 geoFolder.open();
-    //                 geoFolderRef.current = geoFolder;
-    //             });
-    //         }
-    //     }
-    //     else
-    //     {
-    //         setAddGeoFolderCallBack(null);
-    //     }
-    
-    // }, [gui, geoFolderRef, onGUI]);
 
     useEffect(()=>{
 
@@ -172,4 +139,4 @@ const Badge = ({id,
     )
 }
 
-export default Badge
+export default memo(Badge);

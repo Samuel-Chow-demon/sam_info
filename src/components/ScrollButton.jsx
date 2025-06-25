@@ -3,7 +3,7 @@ import { IconButton, Stack } from '@mui/material'
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { blue, grey } from '@mui/material/colors';
-import { forwardRef } from 'react';
+import { forwardRef, memo } from 'react';
 
 const ScrollButton = forwardRef(({upOnClick=()=>{},
                                   downOnClick=()=>{},
@@ -76,4 +76,4 @@ const ScrollButton = forwardRef(({upOnClick=()=>{},
     )
 });
 
-export default ScrollButton;
+export default memo(ScrollButton);

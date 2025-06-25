@@ -1,15 +1,11 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, memo} from 'react'
 import Loading from './Loading';
-
-import {PARAGRAPH_COLOR} from '../script/constant'
 
 import yaml from 'js-yaml'
 import skillYamlFile from '../data/SkillsAndLang.yaml?raw'
 import useYamlCfgStyle from '../hook/useYamlCfgStyle';
 
 import ContentContainer from './ContentContainer';
-
-import IconComponent from './IconComponent'
 
 const SkillAndLang = () => {
 
@@ -38,7 +34,6 @@ const SkillAndLang = () => {
         );
     }
 
-
     return (
         <>
             {
@@ -51,4 +46,4 @@ const SkillAndLang = () => {
     );
 }
 
-export default SkillAndLang
+export default memo(SkillAndLang);
