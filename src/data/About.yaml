@@ -22,13 +22,13 @@ paragraph:
             style:
                 color: 'rgb(226, 193, 131)'
         - value: 
-            text: "degree with research focused on diamagnetic levitation, specifically its extension and stability. My research insight the potential of diamagnetic levitation in enhancing micro- and nano-scale force sensing technologies."
+            text: "degree with research focused on diamagnetic levitation — specifically its extension and stability. My research highlighted the potential of diamagnetic levitation in enhancing micro- and nano-scale force sensing technologies."
 
     - index : 1
       content:
         valueGp: 
         - value:
-            text: "Work as a "
+            text: "I work as a "
         - value: 
             text: "Software Engineer "
             style:
@@ -42,32 +42,32 @@ paragraph:
         - value:
             text: ", I have specialized in "
         - value:
-            text: "Semi-Conductor Manufacturing Robotics"
+            text: "semiconductor manufacturing robotics"
             style:
                 color: 'rgb(226, 193, 131)'
         - value:
-            text: ", contributing to projects ranging from High-Speed chip LED Testing & Sorting Machines to Wafer-Embedded Chip / LED "
+            text: ", contributing to projects ranging from high-speed chip LED test & sort machines to wafer-embedded chip / LED "
         - value:
-            text: "Surface Mount Technology Bonding Machines"
+            text: "surface mount technology bonding machines"
             style:
                 color: 'rgb(226, 193, 131)'
         - value:
-            text: ". Handled unit as small as down to 2 mil x 4 mil sized chip (1 mil == 0.0254 mm)."
+            text: ". I've handled unit as small as down to 2 mil x 4 mil sized chip (1 mil == 0.0254 mm)."
 
     - index: 2
       style:
         mb: '3em'
       list:
         subheader:
-            text: "An overview expertise involves:"
+            text: "My core expertise includes:"
             style:
                 mb: '0.5em'
         points:
         - point: "Conducting motion cycle and control research"
         - point: "Optimizing robotic production cycles (up to 60,000 UPH)"
         - point: "Developing machine application software with in-house vision systems and motor control"
-        - point: "Machine product software responsible to in-house production and customers"
-        - point: "Delivering tailor production solutions & Industry 4.0 to customers"
+        - point: "Delivering machine product software for both in-house production and customers"
+        - point: "Providing tailored production solutions and Industry 4.0 integration for clients"
 
     - index: 3
       subheader:
@@ -83,19 +83,19 @@ paragraph:
             mb: "0"
         valueGp:
         - value:
-            text: "— I embrace a mindset that welcome infinite possibilities to learn from others and the world. With humility, I acknowledge my weaknesses, face failures with optimism, and strive to turn shortcomings into strength for future challenges. This growth-oriented perspective has led me to expand my expertise in "
+            text: "— I embrace a mindset that welcomes infinite possibilities to learn from others and the world. With humility, I acknowledge my weaknesses, face failures with optimism, and strive to turn shortcomings into strengths for future challenges. This growth-oriented perspective has led me to expand my expertise in "
         - value:
-            text: "Computer System Technology"
+            text: "computer system technology"
             style:
                 color: 'rgb(226, 193, 131)'
         - value: 
-            text: " to deepen my knowledege in "
+            text: ", deepening my knowledege in "
         - value:
             text: "AI, Web & Mobile "
             style:
                 color: 'rgb(226, 193, 131)'
         - value:
-            text: "Application development and "
+            text: "application development and "
         - value:
             text: "a variety of programming languages, platforms, tools and libraries."
             style:

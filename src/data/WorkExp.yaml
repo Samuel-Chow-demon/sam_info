@@ -41,9 +41,9 @@ workexp:
                         mb: '0.5em'
                         color: '#bdae77'
                 points:
-                - point: "Leading research for machine module process overlap, including inspection of Rotary with Arms, Rotary Motor with self Up Down and Up Down Arm Action"
-                - point: "Cooperate with Netherlands Motion Research Team on developing Motor Auto Tuning functionality (in-house filter control algorithm to adapt 10um accuracy in 5ms)"
-                - point: "Conducting production algorithm and software enhancement for machine capability, state machine module logging, software resources memory and processing optimization etc."
+                - point: "Leading research on machine module process overlap, including inspection of rotary systems with arms, rotary motors with self up/down movement, and up/down arm actions"
+                - point: "Collaborated with the Netherlands Motion Research Team to develop motor auto-tuning functionality, utilizing in-house filter control algorithms to achieve 10 µm accuracy within 5 ms"
+                - point: "Conducted production algorithm and software enhancements to improve machine capability, including state machine module logging, software resource optimization, and processing/memory efficiency improvements"
 
           - value:
               style:
@@ -56,10 +56,10 @@ workexp:
                         mb: '0.5em'
                         color: '#bdae77'
                 points:
-                - point: Conducting source code or repository management through Git Implementation
-                - point: "Reponsible for Wafer To Wafer / Panel (Surface Mount) Model: Vortex 2"
-                - point: "Reponsible for LED Test & Sort Model : PS600T, PS600B, PS680, PS680T"
-                - point: "Reponsible for LED Test & Tape Model : SLT400Plus"
+                - point: "Conducted source code and repository management using Git implementation"
+                - point: "Responsible for Wafer To Wafer / Panel (Surface Mount) Model: Vortex 2"
+                - point: "Responsible for LED Test & Sort Models : PS600T, PS600B, PS680, PS680T"
+                - point: "Responsible for LED Test & Tape Model : SLT400Plus"
 
           - value:
               style:
@@ -67,16 +67,16 @@ workexp:
                 marginTop: "1rem"
               list:
                 subheader:
-                    text: "In-house Support & Customer Tailor Services"
+                    text: "In-House Support & Customer-Tailored Services"
                     style:
                         mb: '0.5em'
                         color: '#bdae77'
                 points:
-                - point: "Providing Software Tools for Company Field / Service Engineer to handle customer issues"
-                - point: "Conduct in-house consultations for machines to production and manufacturing colleagues regarding machine process failure, machine settings and machine optimization problems"
-                - point: "Support customer request on machine configuration portability to extract and import machine device settings for factory centralization control"
-                - point: "Tailor Lot Management System for different customers with report generations, database utilization and device control centralization execution"
-                - point: "Ensuring machines fulfill client needs and satisfying more than 30 worldwide clients including LumiLEDs, Dominant, GREE, LEXSTAR, Sanken, LITEON and more"
+                - point: "Provide software tools for company field and service engineers to assist with customer issue resolution"
+                - point: "Conduct in-house consultations for production and manufacturing teams, addressing machine process failures, configuration settings, and optimization issues"
+                - point: "Support customer requests for machine configuration portability, enabling export/import of device settings for centralized factory control"
+                - point: "Customize Lot Management Systems for various clients, including report generation, database integration, and centralized device control execution"
+                - point: "Ensure machine performance meets client requirements, serving over 30 global clients, including LumiLEDs, Dominant, GREE, LEXSTAR, Sanken, LITEON, and more"
 
   - company:
       icon: "asmpt50"
@@ -119,9 +119,9 @@ workexp:
                         mb: '0.5em'
                         color: '#bdae77'
                 points:
-                - point: "Cooperated with in-house motion control team on researching and developing specific motor motion features, such as Robot Arm Soft Touch Capability and Detection"
-                - point: "Performed statistical logging and moderated air blowing time or pulsing mode to optimize purging pressure and boost efficiency for sorting robot with at most 256 tubes"
-                - point: "New machine model module development design and test with testing software application"
+                - point: "Collaborated with the in-house motion control team to research and develop specialized motor motion features, such as robot arm soft-touch capability and detection"
+                - point: "Performed statistical logging and optimized air blow timing and pulsing modes to improve purging pressure and sorting efficiency for robots handling up to 256 tubes"
+                - point: "Designed and tested new machine model modules, including the development of custom testing software applications"
 
           - value:
               style:
@@ -134,9 +134,9 @@ workexp:
                         mb: '0.5em'
                         color: '#bdae77'
                 points:
-                - point: Conducting source code or repository management through Git Implementation
-                - point: "Reponsible for LED Test & Sort Model : PS500T, SLS230TPlus, IP360BN"
-                - point: "Reponsible for LED Test & Tape Model : SLT400, SLT400Plus"
+                - point: "Conducted source code and repository management using Git implementation"
+                - point: "Responsible for LED Test & Sort Models : PS500T, SLS230TPlus, IP360BN"
+                - point: "Responsible for LED Test & Tape Models : SLT400, SLT400Plus"
 
           - value:
               style:
@@ -149,10 +149,10 @@ workexp:
                         mb: '0.5em'
                         color: '#bdae77'
                 points:
-                - point: "Develop robot module tailored features and precaution handling on processing customer fragile and scratch free high-end units"
-                - point: "Conduct in-house consultations for machines to production and manufacturing colleagues regarding machine process failure, machine settings and machine optimization problems"
-                - point: "Develop automated PC digitial cleaning and backup tools for in-house manufacturing production process"
-                - point: "Documented with procedures and menu for tailor customer support"
+                - point: "Developed tailored robot module features with precautionary handling for processing fragile and scratch-free high-end customer units"
+                - point: "Conducted in-house consultations with production and manufacturing teams on machine process failures, configuration settings, and optimization issues"
+                - point: "Developed automated PC digital cleaning and backup tools to support in-house manufacturing processes"
+                - point: "Documented procedures and user manuals to support customized customer service and troubleshooting"
 
   - company:
       icon: "asmpt50"
@@ -195,10 +195,10 @@ workexp:
                         mb: '0.5em'
                         color: '#bdae77'
                 points:
-                - point: "Designed and optimized pneumatic system through oscilloscope for electrical (valve, sensor) and physical response (High Speed Camera)"
-                - point: "Designed Unit Feeding (Input) Timing Sequence and implemented into several pre-designed models on LED unit type in existing market"
-                - point: "Designed MCU program on automating the least necessary valves as a standalone transferring aided advice (US Patented)"
-                - point: "Developed Robot Input Timing Chart Sequence, adopting standard combination sequences of pneumatic work into the system"
+                - point: "Designed and optimized pneumatic systems using an oscilloscope to analyze both electrical signals (valves, sensors) and physical responses (via high-speed camera)"
+                - point: "Designed unit feeding (input) timing sequences and implemented them across multiple pre-existing LED unit models in the market"
+                - point: "Developed an MCU program to automate the minimum required valve operations, enabling standalone transfer assistance — recognized with a U.S. patent"
+                - point: "Created robot input timing charts, integrating standard pneumatic operation sequences into system logic"
 
           - value:
               style:
@@ -211,9 +211,9 @@ workexp:
                         mb: '0.5em'
                         color: '#bdae77'
                 points:
-                - point: Conducting source code or repository management through Git Implementation
-                - point: "Reponsible for LED Test & Sort Model : SLS230, SLS230T, SLS200T, SLS200C"
-                - point: "Reponsible for LED Test & Tape Model : SLT400, SLT400BW"
+                - point: "Conducted source code and repository management using Git implementation"
+                - point: "Responsible for LED Test & Sort Models : SLS230, SLS230T, SLS200T, SLS200C"
+                - point: "Responsible for LED Test & Tape Models : SLT400, SLT400BW"
 
           - value:
               style:
@@ -226,8 +226,8 @@ workexp:
                         mb: '0.5em'
                         color: '#bdae77'
                 points:
-                - point: "Optimized Robot UPH (Unit-per-Hour) for various customer products"
-                - point: "Provided in-house production support to manufacturing engineer by aiding software tool development and helping debug machine running processes"
+                - point: "Optimized robot UPH (Units Per Hour) across a variety of customer product types to improve throughput and efficiency"
+                - point: "Provided in-house production support to manufacturing engineers by developing software tools and assisting in debugging machine runtime processes"
 
   - company:
       icon: "cityu"
@@ -270,9 +270,9 @@ workexp:
                         mb: '0.5em'
                         color: '#bdae77'
                 points:
-                - point: "Designed Experiment Test Jig for Vertical Diamagnetic Levitation"
-                - point: "Study Diamagnetic Levitation Stabilizing Range Extension under Shape Effect of Magnetic Source"
-                - point: "Study Vertical Diamagnetic Levitation Spring Force Modulation"
+                - point: "Designed an experimental test jig for vertical diamagnetic levitation"
+                - point: "Investigated the extension of the stabilizing range in diamagnetic levitation based on the shape effect of the magnetic source"
+                - point: "Studied the modulation of spring force in vertical diamagnetic levitation systems"
    
 
 

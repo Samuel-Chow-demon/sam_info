@@ -105,9 +105,9 @@ content:
                 color: '#bdae77'
           points:
           - point: "Manufacturing robots application software"
-          - point: "MCU Programming with device to machine robots"
-          - point: "Robotic Automations, Motor Motion Control Knowledge"
-          - point: "LED Optical Inspection (AOI) and Sorting"
+          - point: "MCU Programming with device to machine integration"
+          - point: "Robotic Automations & Motor Motion Control Knowledge"
+          - point: "LED Optical Inspection (AOI) & Sorting System"
           - point: "Mini / Micro LED Surface Mount Technology"
             content:
               listGp:
@@ -117,16 +117,16 @@ content:
                       - point: "Wafer to PCB"
                       - point: "Wafer to Wafer"
                       - point: "Wafer to Display Panel"
-          - point: "Encoder Test - Motion End Performance Test"
+          - point: "Encoder Test & Motion End Performance Analysis"
           - point: "Machine Automation Features"
             content:
               listGp:
                 - value:
                     list:
                       points:
-                      - point: "Auto position-limit search"
-                      - point: "Iterative control learning"
-                      - point: "Motion space-timing optimization"
+                      - point: "Auto Position-Limit Search"
+                      - point: "Iterative Control Learning"
+                      - point: "Motion Space-Timing Optimization"
 
     - value:
         style:

@@ -30,10 +30,10 @@ education:
                 marginTop: "1rem"
               list:
                 points:
-                - point: "design and develop software application for PC, Web, and Mobile devices"
-                - point: "design, analyze, develop, debug and optimize applications written in a variety of popular programming language such as Python, JavaScript, Java, C++, Kotlin and Swift"
-                - point: "collaborate efficiently as a software project team working with popular project development tools and development frameworks"
-                - point: "learn new tools and technologies independently following the latest trends in software and hardware"
+                - point: "Design and develop software applications for PC, Web, and mobile devices"
+                - point: "Design, analyze, develop, debug, and optimize applications written in a variety of popular programming languages, such as Python, JavaScript, Java, C++, Kotlin, and Swift"
+                - point: "Collaborate efficiently in software project teams, using popular development tools and frameworks"
+                - point: "Independently learn new tools and technologies, staying up to date with the latest trends in software and hardware"
 
           - value:
               style:
