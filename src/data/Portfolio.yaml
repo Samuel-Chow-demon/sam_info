@@ -185,9 +185,9 @@ page:
               mb: '0.5em'
               color: '#bdae77'
         points:
-        - point: "This project is a Java-based 2D real-time multiplayer maze runner game that introduces dedicated server and client services to enable smooth and synchronized gameplay"
-        - point: "Players act as clients who navigate through a dynamic maze with the objective of reaching the finish point before their opponents to claim victory"
-        - point: "The server functions as a central router, managing connections between players. It receives real-time game state updates from each client (such as position, actions, or events), processes them, and broadcasts the synchronized game state back to all connected clients. This ensures a consistent and competitive multiplayer experience"
+        - point: "This project is a Java-based 2D real-time multiplayer maze runner game that features dedicated server and client services to enable smooth and synchronized gameplay"
+        - point: "Players act as clients navigating through a dynamic maze, aiming to reach the finish point before their opponents to claim victory"
+        - point: "The server functions as a central router, managing player connections. It receives real-time game state updates from each client—such as position, actions, and events—processes them, and broadcasts the synchronized game state back to all connected clients. This architecture ensures a consistent and competitive multiplayer experience"
 
     images:
       subheader:
@@ -257,9 +257,9 @@ page:
               mb: '0.5em'
               color: '#bdae77'
         points:
-        - point: "This project is a C++ terminal console space invader game that introduces simple character-to-pixel rendering method"
-        - point: "Player control a spaceship with arrow keys (UP, DOWN, LEFT, RIGHT) for the movement, and the 'S' key to fire missile."
-        - point: "The project demonstrates object orientation implementation of enemies, spaceship and missiles, as well as the game object polymorphism, hierachy and looping controls with sampling response"
+        - point: "This project is a C++ terminal console Space Invader game that features a simple character-to-pixel rendering method"
+        - point: "The player controls a spaceship using the arrow keys (UP, DOWN, LEFT, RIGHT) for movement, and the 'S' key to fire missiles"
+        - point: "The project demonstrates object-oriented programming concepts including enemy, spaceship, and missile classes, as well as game object polymorphism, hierarchy, and control loops with sampling response"
 
     images:
       subheader:
@@ -345,10 +345,10 @@ page:
               mb: '0.5em'
               color: '#bdae77'
         points:
-        - point: "This project is a simple expense tracker that allows users to store their expense records with a detailed tracking history"
-        - point: "Application provides account creation functionality to securely store each user’s expense data"
-        - point: "Each expense record can be assigned to a custom category, with matching icons from a pre-installed icon pool"
-        - point: "Application also supports an expense summary grouped by category, and visualizes the data in a year-month chart for easy tracking and analysis"
+        - point: "This project is a simple expense tracker that enables users to securely store and manage their expense records with detailed tracking history"
+        - point: "The application provides account creation functionality to ensure each user’s expense data is stored securely"
+        - point: "Each expense record can be assigned to a custom category, with matching icons selected from a pre-installed icon pool"
+        - point: "The application also supports an expense summary grouped by category and visualizes data in a year-month chart for easy tracking and analysis"
 
     chipcontent:
       isdeploy: true
@@ -432,11 +432,11 @@ page:
             mb: '0.5em'
             color: '#bdae77'
         points:
-        - point: "This project is a simplified Trello-style team management web application allows teams to create workspaces for work distributons"
-        - point: "Application provides account creation functionality to securely store each team and user data"
-        - point: "Each user can create teams, projects, states and tasks for work dynamics"
-        - point: "Each user can add other member to team, add member to project and arrange members to different tasks"
-        - point: "Handy drag-and-drop feature enables seamless rearrangement of tasks between states and prioritization of states within a project"
+        - point: "This project is a simplified Trello-style team management web application that allows teams to create workspaces for effective work distribution"
+        - point: "The application provides account creation functionality to securely store data for each team and user"
+        - point: "Users can create teams, projects, states, and tasks to manage work dynamics efficiently"
+        - point: "Users can add members to teams and projects, and assign members to different tasks"
+        - point: "A handy drag-and-drop feature enables seamless rearrangement of tasks between states and prioritization of states within a project"
 
     chipcontent:
       isdeploy: true
@@ -557,11 +557,11 @@ page:
             mb: '0.5em'
             color: '#bdae77'
         points:
-        - point: "This project is a timeseries data prediction project through using supervised regression learning model from sci-kit learn library"
-        - point: "Three real industrial data with artificial bias included are investigated"
-        - point: "Each dataset would have a column feature as the prediction target"
-        - point: "Each data records different numerical values of multiple feature column with numerical naming"
-        - point: "All the data is record at the 1st day of every month from year 2000 to year 2023"
+        - point: "This project focuses on time series data prediction using supervised regression learning models from the scikit-learn library"
+        - point: "Three real industrial datasets, each with artificially introduced bias, are analyzed"
+        - point: "Each dataset includes one feature column designated as the prediction target"
+        - point: "The datasets contain numerical values across multiple feature columns with numerical naming conventions"
+        - point: "All data records correspond to the first day of each month from the year 2000 to 2023"
 
     chipcontent:
       link: "https://docs.google.com/presentation/d/1vzLvmQ1f9gzsvuk5h-RmJjLIdovTewvH/edit?usp=drive_link&ouid=107050956325506656132&rtpof=true&sd=true"
@@ -704,11 +704,11 @@ page:
             mb: '0.5em'
             color: '#bdae77'
         points:
-        - point: "This project is a web application for real-time parking slot detection. It includes two frontends and one backend"
-        - point: "Two frontends serve for public users and parking site property owners, while the backend handles the request from two frontends on providing real-time site video streaming"
-        - point: "The backend would apply YOLO trained model from predefined parking image dataset to identify parking slot vacancy and occupied condition"
-        - point: "The vacancy and occupied counts will be displayed in the application user interface in both frontends"
-        - point: "Mobile user can make use the information for friendly parking while property owner can utilize it for better management"
+        - point: "This project is a web application for real-time parking slot detection, consisting of two frontends and one backend"
+        - point: "One frontend serves public users, while the other serves parking site property owners. The backend manages requests from both frontends and provides real-time site video streaming"
+        - point: "The backend applies a YOLO-trained model—trained on a predefined parking image dataset to identify parking slot vacancy and occupancy"
+        - point: "Vacancy and occupancy counts are displayed on the user interfaces of both frontends"
+        - point: "Mobile users benefit from this information for easier parking, while property owners can use it for improved site management"
 
     images:
       subheader:
@@ -865,10 +865,10 @@ page:
             color: '#bdae77'
         points:
         - point: "This project is a mobile application prototype designed for learning and sharing cooking recipes"
-        - point: "The app would have two kinds of account, explorer and creator"
-        - point: "Explorer allows to search and explore the food recipe which created by food content creators. While the food content creators are able to be subscribed on gaining revenue from subscribers"
-        - point: "The project includes all necessary functionality and pages likes signup, login, payment, dashboard, recipe view / creation page, messaging, comments etc."
-        - point: "At the same time considering the design of user experience and interface importance"
+        - point: "The app supports two types of accounts: Explorer and Creator"
+        - point: "Explorers can search and explore recipes created by food content creators, while creators can gain revenue through subscriptions from their followers"
+        - point: "The project includes essential features such as signup, login, payment processing, dashboard, recipe creation and viewing pages, messaging, and comments"
+        - point: "Throughout development, special attention was given to user experience and interface design"
 
     chipcontent:
       isdeploy: true
@@ -1031,14 +1031,12 @@ page:
             color: '#bdae77'
         points:
         - point: "This project is a 2D survival mobile game developed using Android Studio"
-        - point: "The app features a multi-screen user flow, beginning with a landing page where users can sign in or sign up. Authentication is handled via Firebase OAuth"
+        - point: "The app features a multi-screen user flow, beginning with a landing page where users can sign in or sign up."
         - point: "Authentication is handled via Firebase OAuth"
-        - point: "Leaderboard system is included and powered by Firebase Firestore, allowing for real-time scrore tracking and global comparison between players"
-        - point: "Gameplay has multiple levels, each with its own unique difficulty"
-        - point: "Player moves the character in a world map system"
-        - point: "Player only needs to use a thumb to control the character to move and attack by dragging and tapping"
-        - point: "Enemy would be created from random direction in a random of time intervals"
-        - point: "Player needs to keep alive and kill enemies to clear stages"
+        - point: "A leaderboard system, powered by Firebase Firestore, allows for real-time score tracking and global player comparisons"
+        - point: "The gameplay includes multiple levels, each with its own unique difficulty."
+        - point: "Players control a character on a world map using simple thumb gestures—dragging to move and tapping to attack"
+        - point: "Enemies spawn from random directions at random time intervals, and players must survive and eliminate enemies to clear each stage"
 
     images:
       subheader:
@@ -1219,13 +1217,13 @@ page:
             mb: '0.5em'
             color: '#bdae77'
         points:
-        - point: "This project is implementing the administrative section from the 'JustPark' Project under AWS infrastructure and named as 'ESeePark'"
-        - point: "Frontend and Backend services are deployed through AWS EC2 Instances under AWS VPC network system"
-        - point: "Frontend utilizes AWS Cognito for registration, authenication and confirmation"
-        - point: "New account registration invokes AWS Lambda to pass the data into AWS DynamoDB for storage"
-        - point: "On the other hand, Backend runs a server on listening to the Frontend request"
-        - point: "Detection model and data are stored in a AWS S3 bucket which infrastructuring as a network drive for the Backend instance through AWS Storage Gateway service"
-        - point: "A proxy server at the frontend public EC2 Instnace is also introduced to redirect the request from public IP client to private backend"
+        - point: "This project implements the administrative section of the JustPark system under AWS infrastructure, and is named ESeePark"
+        - point: "Both the frontend and backend services are deployed on AWS EC2 instances within an AWS VPC (Virtual Private Cloud) network"
+        - point: "The frontend utilizes AWS Cognito for user registration, authentication, and account confirmation"
+        - point: "New account registrations trigger an AWS Lambda function, which stores user data in AWS DynamoDB"
+        - point: "The backend runs a server that listens for requests from the frontend"
+        - point: "The detection model and associated data are stored in an AWS S3 bucket, which is mounted as a network drive on the backend instance using AWS Storage Gateway"
+        - point: "A proxy server on the frontend public EC2 instance is introduced to redirect client requests from the public IP to the private backend, ensuring secure and seamless communication"
 
     images:
       subheader:
@@ -1285,74 +1283,74 @@ page:
                             mb: '0.5em'
                       points:
                       - point: "Master MCU for navigation control"
-                      - point: "Slave MCU for sensor management"
+                      - point: "Slave MCU handles sensor management"
 
                 - value:
                     list:
                       subheader:
-                        text: "Motor Control : Maxon Motor, Driver, LM628, DAC0800, optocoupler"
+                        text: "Motor Control :"
                         style:
                             mb: '0.5em'
                       points:
-                      - point: "ATmgea128 PWM Interrupt Port →"
-                      - point: "LM628 Precision motor control chip →"
-                      - point: "Optocoupler (noise isolation) →"
-                      - point: "DAC0800 (since motor driver takes in +/-12VDC) →"
-                      - point: "Maxon motor driver →"
-                      - point: "Maxon brushless motor"
+                      - point: "ATmgea128 (PWM via interrupt port)"
+                      - point: "→ LM628 (Precision motor control chip)"
+                      - point: "→ Optocoupler (noise isolation)"
+                      - point: "→ DAC0800 (motor driver requires +/-12VDC input)"
+                      - point: "→ Maxon motor driver"
+                      - point: "→ Maxon brushless motor"
 
                 - value:
                     list:
                       subheader:
-                        text: "Navigation Position Feedback : Optical Encoder, HTCL2020"
+                        text: "Navigation Position Feedback :"
                         style:
                             mb: '0.5em'
                       points:
-                      - point: "External optical encoder →"
-                      - point: "HCTL 2020 (decode) →"
-                      - point: "16 bit digit counter →"
-                      - point: "One Atmega128 port with high low byte shift"
+                      - point: "External optical encoder"
+                      - point: "→ HCTL-2020 (quadrature decoder)"
+                      - point: "→ 16 bit digit counter output"
+                      - point: "→ ATmega128 (reads high/low byte via port toggling)"
                   
                 - value:
                     list:
                       subheader:
-                        text: "Other DC Motor : 12800 H-bridge"
+                        text: "Other DC Motor :"
                         style:
                             mb: '0.5em'
                       points:
-                      - point: "ATmgea128 PWM interrupt port →"
-                      - point: "12800 H-bridge →"
-                      - point: "DC / Servo motor"
+                      - point: "ATmgea128 (PWM via interrupt port)"
+                      - point: "→ 12800 H-bridge →"
+                      - point: "→ DC / Servo motor"
 
                 - value:
                     list:
                       subheader:
-                        text: "Communication : ISP, I2C"
+                        text: "Communication Interface:"
                         style:
                             mb: '0.5em'
                       points:
-                      - point: "ISP → program write"
-                      - point: "I2C → master-slave MCU"
+                      - point: "ISP → for programming microcontrollers"
+                      - point: "I²C Bus → Master-slave communication between the two ATmega128 MCUs"
 
                 - value:
                     list:
                       subheader:
-                        text: "Sensing : Utrasonic sensor, infra-red emitter and receiver stack"
+                        text: "Sensing :"
                         style:
                             mb: '0.5em'
                       points:
-                      - point: "Utrasonic sensor for object sensing"
-                      - point: "Infra-red sensor for line tracking"
+                      - point: "Utrasonic sensor → object detection"
+                      - point: "Infra-red Emitter & Receiver Stack → line tracking"
 
                 - value:
                     list:
                       subheader:
-                        text: "Power : DC-DC Converter"
+                        text: "Power :"
                         style:
                             mb: '0.5em'
                       points:
-                      - point: "DC-DC Converter with 24 VDC to +/-12VDC"
-                      - point: "24VDC to 9VDC → 7805 → 5VDC"
+                      - point: "DC-DC Converter → 24 VDC to +/-12VDC"
+                      - point: "24VDC → 9VDC → 7805 regulator → 5VDC logic supply"
 
     images:
       subheader:
