@@ -94,11 +94,11 @@ const ScrollButtonComponent = ({stepLabelDomRef}) => {
 
     }, []);
 
-    const customScrollIntoView = (element) =>{
+    const customScrollIntoView = (element, specPos = -1) =>{
 
-        if (element)
+        if (element || specPos >= 0)
         {
-            const top = element.offsetTop;
+            const top = specPos >= 0 ? specPos : element.offsetTop;
 
             rootDom.scrollTo({
                 top : top,
@@ -112,7 +112,7 @@ const ScrollButtonComponent = ({stepLabelDomRef}) => {
         if (activeLabelIdx.current >= 0)
         {
             const nextDom = (activeLabelIdx.current - 1 >= 0) ? stepLabelDomRef.current[activeLabelIdx.current - 1] : null;
-            customScrollIntoView(nextDom);
+            customScrollIntoView(nextDom, nextDom === null ? 0 : -1);
 
             // Cannot direct use scrollIntoView since it would affect the iframe at the parent app
             // stepLabelDomRef.current[activeLabelIdx.current - offset]?.scrollIntoView({

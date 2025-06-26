@@ -1,4 +1,4 @@
-import {memo, useEffect, useState} from 'react'
+import {memo, useEffect, useRef, useState} from 'react'
 import Loading from './Loading';
 
 import { Box,
@@ -7,13 +7,14 @@ import { Box,
          Tabs,
          Tooltip} from '@mui/material'
 
-import yaml from 'js-yaml'
 import certAndPublicateYamlFile from '../data/CertAndPublicate.yaml?raw'
 
 import ContentContainer from './ContentContainer';
 
 import imgLibrary from '../utility/ImgLibrary'
 import { blue, grey, purple } from '@mui/material/colors';
+import { getYamlData } from '../utility/yamlDataCenter';
+import ScrollButtonComponent from './ScrollButtonComponent';
 
 const allCategoryKey = "All";
 
@@ -25,11 +26,16 @@ const CertAndPublicate = () => {
 
     const [category, setCategory] = useState(allCategoryKey);
 
+    const stepLabelDOM = useRef({});
 
     useEffect(()=>{
-        const data = yaml.load(certAndPublicateYamlFile);
+        const data = getYamlData(certAndPublicateYamlFile); 
 
-        if ('category' in data){
+        const list = data?.category?.map((obj)=>obj.cat);
+
+        if (list &&
+            !list.includes(allCategoryKey))
+        {
             data.category = [{cat: allCategoryKey}, ...data.category];
         };
         setSection(data);
@@ -38,7 +44,24 @@ const CertAndPublicate = () => {
 
     }, []);
 
+    const storeStepLabelDOM = (dom)=>{
+
+        if (!dom) return;
+
+        const domObject = stepLabelDOM?.current ?? null;
+        if (domObject)
+        {
+            const objectSize = Object.keys(domObject).length;
+            const objectValue = Object.values(domObject).map((obj)=>obj.offsetTop);
+            if (!objectValue.includes(dom.offsetTop))
+            {
+                domObject[objectSize] = dom;
+            }
+        }
+    }
+
     const handleTabChange = (e, selectCAT)=>{
+        stepLabelDOM.current = {};
         setCategory(selectCAT)
     }
 
@@ -79,7 +102,9 @@ const CertAndPublicate = () => {
                         return ((obj.cnp.category === category || 
                                  category === allCategoryKey) ?
     
-                            <Grid key={`${id}-gridcard-${index}`}
+                            <Grid
+                                ref={storeStepLabelDOM} 
+                                key={`${id}-gridcard-${index}`}
                                 size={{xs:2, sm: 4, md: 4}}    
                             >
     
@@ -203,7 +228,10 @@ const CertAndPublicate = () => {
                 isLoading ?
                 <Loading /> :
 
-                <ContentContainer contentComponent={<Content id={'cnp'} sectionObj={section} />} title={section.title} />
+                <>
+                    <ScrollButtonComponent stepLabelDomRef={stepLabelDOM}/>
+                    <ContentContainer contentComponent={<Content id={'cnp'} sectionObj={section} />} title={section.title} />
+                </>
             }
         </>
     );

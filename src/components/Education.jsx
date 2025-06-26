@@ -5,7 +5,6 @@ import { Box, Stepper, Step, StepContent, StepLabel, Button, Zoom } from '@mui/m
 
 import {PARAGRAPH_COLOR} from '../script/constant'
 
-import yaml from 'js-yaml'
 import educationYamlFile from '../data/Education.yaml?raw'
 import useYamlCfgStyle from '../hook/useYamlCfgStyle';
 
@@ -15,6 +14,7 @@ import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
 
 import IconComponent from './IconComponent'
 import ScrollButtonComponent from './ScrollButtonComponent';
+import { getYamlData } from '../utility/yamlDataCenter';
 
 const Education = () => {
   
@@ -33,7 +33,7 @@ const Education = () => {
     } = useYamlCfgStyle();
 
     useEffect(()=>{
-        const data = yaml.load(educationYamlFile);
+        const data = getYamlData(educationYamlFile); 
         setSection(data);
         setIsLoading(false);
 

@@ -1,6 +1,5 @@
 import {useState, useEffect, memo, useRef} from 'react'
 
-import yaml from 'js-yaml'
 import portfolioYamlFile from '../data/Portfolio.yaml?raw'
 
 import ContentContainer from './ContentContainer';
@@ -12,6 +11,8 @@ import IconComponent from './IconComponent';
 import Loading from './Loading';
 
 import PortfolioContent from './PortfolioContent';
+import { getYamlData } from '../utility/yamlDataCenter';
+import ScrollButtonComponent from './ScrollButtonComponent';
 
 const allCategoryKey = "All";
 
@@ -28,11 +29,17 @@ const Portfolio = () => {
     const [category, setCategory] = useState(allCategoryKey);
 
     const [selectedProj, setSelectedProj] = useState(null);
+
+    const stepLabelDOM = useRef({});
     
     useEffect(()=>{
-        const data = yaml.load(portfolioYamlFile);
+        const data = getYamlData(portfolioYamlFile);
 
-        if ('category' in data){
+        const list = data?.category?.map((obj)=>obj.cat);
+
+        if (list &&
+            !list.includes(allCategoryKey))
+        {
             data.category = [{cat: allCategoryKey}, ...data.category];
         };
         setSection(data);
@@ -41,7 +48,24 @@ const Portfolio = () => {
 
     }, []);
 
+    const storeStepLabelDOM = (dom)=>{
+
+        if (!dom) return;
+
+        const domObject = stepLabelDOM?.current ?? null;
+        if (domObject)
+        {
+            const objectSize = Object.keys(domObject).length;
+            const objectValue = Object.values(domObject).map((obj)=>obj.offsetTop);
+            if (!objectValue.includes(dom.offsetTop))
+            {
+                domObject[objectSize] = dom;
+            }
+        }
+    }
+
     const handleTabChange = (e, selectCAT)=>{
+        stepLabelDOM.current = {};
         setCategory(selectCAT);
     }
 
@@ -70,7 +94,9 @@ const Portfolio = () => {
                         return ((obj.pna.category === category || 
                                     category === allCategoryKey) ?
 
-                            <Grid key={`${id}-gridcard-${index}`}
+                            <Grid
+                                ref={storeStepLabelDOM} 
+                                key={`${id}-gridcard-${index}`}
                                 size={{ xs:2, sm: 4, md: 4}}>
 
                                 <CardComponent id={id} compObj={obj.pna} index={index}/>
@@ -304,11 +330,14 @@ const Portfolio = () => {
                                       setSelectedProj={setSelectedProj}
                                       index={0} />
                     :
-                    <ContentContainer 
-                    contentComponent={<Content id={'pna'} 
-                    sectionObj={section} />} 
-                    title={section.title} 
-                    />
+                    <>
+                        <ScrollButtonComponent stepLabelDomRef={stepLabelDOM}/>
+                        <ContentContainer 
+                        contentComponent={<Content id={'pna'} 
+                        sectionObj={section} />} 
+                        title={section.title} 
+                        />
+                    </>
                 )
             }
         </>

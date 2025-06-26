@@ -312,6 +312,13 @@ const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
                 <Button variant='outlined' 
                         endIcon={<ReplyIcon />}
                         onClick={()=>{setSelectedProj(null)}}
+                        sx={{
+                            color:blue[200],
+                            '&:hover':{
+                                color:amber[500],
+                                borderColor:amber[500]
+                            }
+                        }}
                 >
                     Back
                 </Button>
@@ -366,9 +373,9 @@ const PortfolioContent = ({id, compObj, setSelectedProj, index, style={}}) => {
 
                 <ChipContentComponent compObj={compObj} chipStyle={chipStyle}/>
                 
-                <GridImages id={id} compObj={compObj} index={index} />
-
                 <VideoComponent compObj={compObj} />
+                
+                <GridImages id={id} compObj={compObj} index={index} />
 
             </div>
 
