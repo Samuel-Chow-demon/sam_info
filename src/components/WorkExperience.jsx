@@ -6,7 +6,6 @@ import { Box, Stepper, Step, StepContent, StepLabel,
 
 import {PARAGRAPH_COLOR} from '../script/constant'
 
-import yaml from 'js-yaml'
 import workExpYamlFile from '../data/WorkExp.yaml?raw'
 import useYamlCfgStyle from '../hook/useYamlCfgStyle';
 
@@ -16,6 +15,7 @@ import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
 
 import IconComponent from './IconComponent'
 import ScrollButtonComponent from './ScrollButtonComponent';
+import { getYamlData } from '../utility/yamlDataCenter';
 
 const WorkExperience = () => {
   
@@ -33,7 +33,7 @@ const WorkExperience = () => {
     } = useYamlCfgStyle();
 
     useEffect(()=>{
-        const data = yaml.load(workExpYamlFile);
+        const data = getYamlData(workExpYamlFile); 
         setSection(data);
         setIsLoading(false);
 

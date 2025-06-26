@@ -1,11 +1,11 @@
 import {useState, useEffect, memo} from 'react'
 import Loading from './Loading';
 
-import yaml from 'js-yaml'
 import skillYamlFile from '../data/SkillsAndLang.yaml?raw'
 import useYamlCfgStyle from '../hook/useYamlCfgStyle';
 
 import ContentContainer from './ContentContainer';
+import { getYamlData } from '../utility/yamlDataCenter';
 
 const SkillAndLang = () => {
 
@@ -20,8 +20,7 @@ const SkillAndLang = () => {
     } = useYamlCfgStyle();
     
     useEffect(()=>{
-        const data = yaml.load(skillYamlFile);
-        
+        const data = getYamlData(skillYamlFile); 
         setSection(data);
         setIsLoading(false);
 
