@@ -10,7 +10,7 @@ import profilePic from '../assets/sam.png'
 import {GRID_PADDING_VALUE_PX, INFO_COLOR} from '../script/constant'
 import { memo } from 'react';
 
-const tagList = ["Mechatronic Engineer", "Software Engineer / Developer", "Academic Researcher"];
+const tagList = ["Mechatronic Engineer", "Software Engineer / Developer", "Automation Engineer", "Academic Researcher"];
 
 const contactItemList = [
   {

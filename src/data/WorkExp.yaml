@@ -1,6 +1,65 @@
 title: Work Experience
 workexp:
   - company:
+      icon: "kardium"
+      name: "Kardium Inc."
+      title: 
+        text: "Software Developer (Automation)"
+        style:
+          fontSize: "22px"
+          color: "#c9bfa9"
+          paddingLeft: "4rem"
+          paddingBottom: '1rem'
+      period:
+        text: "Oct 2025 - Present"
+        style:
+          fontSize: "20px"
+          color: "grey"
+      mode:
+        text: "On-Site, Permanent Full-Time"
+        style:
+          fontSize: "18px"
+          color: "grey"
+          marginLeft: "4rem"
+      location: 
+        text: "Burnaby, BC V5J 0B6, Vancouver, Canada"
+        style:
+          fontSize: "18px"
+          color: "grey"
+          marginLeft: "4rem"
+
+      content:
+        listGp:
+          - value:
+              style:
+                marginLeft: "4rem"
+                marginTop: "1rem"
+              list:
+                subheader:
+                    text: "Research & Design:"
+                    style:
+                        mb: '0.5em'
+                        color: '#bdae77'
+                points:
+                - point: "Process studies and research in motor motion to mechanical twisting deformation control in achieving +/- 1 degree accuracy performance under +/- 10 degree criteria."
+                - point: "Develop auto-tuning process design for motion control to mechanical twisting action"
+          
+          - value:
+              style:
+                marginLeft: "4rem"
+                marginTop: "1rem"
+              list:
+                subheader:
+                    text: "Automation Manufacturing Jig Software Responsible (Development, Management & Maintenance)"
+                    style:
+                        mb: '0.5em'
+                        color: '#bdae77'
+                points:
+                - point: "Conducted source code and repository management using Git implementation"
+                - point: "Responsible for Twist & Bend Jig Application Software & Firmware"
+                - point: "Responsible for Laser Jig Application Software & Firmware"
+
+  - company:
       icon: "asmpt50"
       name: "ASMPT Technology Hong Kong Limited"
       title: 

@@ -17,6 +17,15 @@ content:
               icon:
                 width: "3.5rem"
                 height: "3.5rem"
+            icon: "C#"
+            bar:
+              value: 7
+              full: 10
+          - point:
+            style:
+              icon:
+                width: "3.5rem"
+                height: "3.5rem"
             icon: "C++"
             bar:
               value: 8
@@ -87,10 +96,11 @@ content:
                 mb: '0.5em'
                 color: '#bdae77'
           points:
-          - point: "Firebase, MongoDB"
+          - point: "Microsoft SQL Server, Firebase, MongoDB"
           - point: "React, React-Vite, MUI, ThreeJS, R3F, Tailwind CSS, HTML, CSS"
-          - point: "Git, GitHub"
-          - point: "VSCode, Visual Studio, Jupyter Lab / Notebook, Eclipse, IntelliJ, Figma, Android Studio, XCode"
+          - point: "Git, GitHub, BitBucket"
+          - point: "Altium"
+          - point: "VSCode, Visual Studio, Jupyter Lab / Notebook, Eclipse, IntelliJ, Figma"
           - point: "Notion, Trello"
 
     - value:
@@ -98,14 +108,14 @@ content:
           mb: '3rem'
         list:
           subheader:
-            text: "Mechatronics Engineer:"
+            text: "Mechatronics & Automation Engineer:"
             style:
                 fontSize: '22px'
                 mb: '0.5em'
                 color: '#bdae77'
           points:
           - point: "Manufacturing robots application software"
-          - point: "MCU Programming with device to machine integration"
+          - point: "Embedded device programming"
           - point: "Robotic Automations & Motor Motion Control Knowledge"
           - point: "LED Optical Inspection (AOI) & Sorting System"
           - point: "Mini / Micro LED Surface Mount Technology"
@@ -127,6 +137,7 @@ content:
                       - point: "Auto Position-Limit Search"
                       - point: "Iterative Control Learning"
                       - point: "Motion Space-Timing Optimization"
+                      - point: "Process Auto-Tuning System"
 
     - value:
         style:

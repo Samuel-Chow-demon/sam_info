@@ -67,13 +67,13 @@ const DisplayAllBadge = () => {
                         <Suspense fallback={null}>
                             <ProLangBadge proLangList={allLanguages.ProgLang.language}
                             radiusBottom={15}
-                            position={[-70, 10, 0]} 
+                            position={[-75, 10, 0]} 
                             color={0x91577e}
                             scale={0.8}/>
 
                             <ProLangBadge proLangList={allLanguages.ProgLang.db}
                             radiusBottom={15}
-                            position={[50, 10, 0]} 
+                            position={[60, 10, 0]} 
                             color={0x506178}
                             textureRepeat={1}
                             textureOffset={0}

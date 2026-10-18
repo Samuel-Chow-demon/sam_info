@@ -1,5 +1,6 @@
 
 // language
+import csharp from '../assets/language/csharp.webp';
 import c from '../assets/language/c.webp';
 import cpp from '../assets/language/c_plusplus.webp';
 import python from '../assets/language/python.webp';
@@ -47,9 +48,11 @@ import cityu from '../assets/school/cityu.webp'
 // company
 import asmpt50 from '../assets/company/asmpt50.webp'
 import asm from '../assets/company/asm.webp'
+import kardium from '../assets/company/Kardium.webp'
 
 const iconTexture = {
 
+    "C#" : csharp,
     "C" : c,
     "C++" : cpp,
     "python" : python,
@@ -91,6 +94,7 @@ const iconTexture = {
 
     "asmpt50" : asmpt50,
     "asm" : asm,
+    "kardium" : kardium,
 }
 
 export default iconTexture;
