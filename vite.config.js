@@ -5,8 +5,8 @@ import Inspect from 'vite-plugin-inspect'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), Inspect()],
-  //base: '/',  // to build under this folder name
-  base: '/sam-info-app',  // to build under this folder name, for embedded use
+  base: '/',  // to build under this folder name
+  //base: '/sam-info-app',  // to build under this folder name, for embedded use
   build: {
     rollupOptions: {
       output: {
